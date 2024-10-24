@@ -1,0 +1,252 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[margin=2cm]{geometry}
+\usepackage{multicol,amsmath, amssymb}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{pgfplots}
+\usepackage{tikz}
+
+\titleformat{\subsection}
+{\color{red}\normalfont\Large\bfseries}
+{\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}
+{\color{blue}\normalfont\large\bfseries}
+{\thesubsubsection}{1em}{}
+
+\titlespacing{\subsection}{0pt}{0pt}{0pt} % Adjust the spacing here
+\titlespacing{\subsubsection}{0pt}{\baselineskip}{0pt} % Adjust the spacing here
+\newcommand{\summation}[2]{\sum\limits^{#1}_{#2}}
+\usepackage{fancyhdr}
+\usepackage{hyperref} % For hyperlinks
+
+% Define the URL for the footer
+\newcommand{\myURL}{https://mohammedbilalns.github.io/Math-Demystified/}
+
+% Set up fancy headers and footers
+\pagestyle{fancy}
+\fancyhf{} % Clear header and footer
+\rfoot{\href{\myURL}{\myURL}} % Set the right part of the footer as a hyperlink
+
+\begin{document}
+\begin{center}
+    {\LARGE \textbf{Vector Algebra} }
+\end{center}
+
+\begin{multicols*}{2}
+    
+
+Physical quantities we deal are of two types, one that can be specified using a single real number which gives its magnitude and the other which involves the idea of direction as well as magnitude. The first type is called scalar quantity and the second is vector quantity. In this chapter we analyses the basic concepts about vectors, various operations, and their algebraic and geometrical properties.
+
+\subsection*{Basic concepts}
+\subsubsection*{Vector}
+A quantity that has magnitude as well as direction is called a \textbf{vector}.
+
+\begin{center}
+\includegraphics*[scale=0.5]{1.png}
+\end{center}
+The  directed line segments above are   vectors .The third vector is denoted as $\vec{AB}$ or simply $\vec{a}$ and read as \textbf{vector AB} or \textbf{vector a}.
+
+The point A from where the vector $\vec{AB}$ starts is called its \textbf{initial point}, and the
+point B where it ends is called its \textbf{terminal point}. The distance between initial and
+terminal points of a vector is called the \textbf{magnitude} (or length) of the vector, denoted as $\vec{AB}$ or $|\vec{a}|$, or $a$. The arrow indicates the direction of the vector.
+
+\subsubsection*{Position Vector}
+Consider a point P in space, having coordinates $(x, y, z)$ with respect to he origin O (0, 0, 0). 
+Then, the vector $\vec{OP}$ having O and P as its initial and terminal points, respectively
+, is called the \textbf{position vector} of the point P with respect to O.
+
+\includegraphics*[scale=0.5]{2.png}
+
+By distance formula $$|\vec{OP}|=\sqrt{x^2+y^2+z^2}$$
+
+\includegraphics*[scale=0.5]{3.png}
+
+the position vectors of points A, B, C, etc., with respect to the origin O
+are denoted by $\vec{a},\vec{b},\vec{c}$ etc.,
+
+\subsubsection*{Direction Cosines}
+For a position vector $\vec{OP}$
+
+\includegraphics*[scale=0.5]{4.png}
+
+The angles $\alpha,\beta,\gamma$ made by the vector with the positive directions of x, y and z-axes respectively,
+are called its direction angles. The cosine values of these angles, i.e., $cos \alpha, cos \beta$ and
+$cos \gamma$are called direction cosines of the vector , and usually denoted by l, m and n,
+respectively
+
+\subsection*{Types of Vectors}
+\subsubsection*{Zero Vector}
+A vector whose initial and terminal points coincide, is called a zero vector
+(or null vector), and denoted as . Zero vector can not be assigned a definite direction
+as it has zero magnitude.
+\subsubsection*{Unit Vector}
+A vector whose magnitude is unity (i.e., 1 unit) is called a unit vector. The
+unit vector in the direction of a given vector is denoted by $\vec{a}$
+
+\subsubsection*{Coinitial Vector}
+Two or more vectors having the same initial point are called coinitial
+vectors.
+\subsubsection*{Collinear Vector}
+Two or more vectors are said to be collinear if they are parallel to
+the same line, irrespective of their magnitudes and directions.
+\subsubsection*{Equal Vector}
+Two vectors  $\vec{a},\vec{b}$ are said to be equal, if they have the same
+magnitude and direction regardless of the positions of their initial points, and written
+as $\vec{a}=\vec{b}$.
+\subsubsection*{Negative of a vector }
+A vector whose magnitude is the same as that of a given vector
+(say, $\vec{AB}$), but direction is opposite to that of it, is called negative of the given vector.
+For example, vector $\vec{BA}$ is negative of the vector $\vec{AB}$ , and written as $\vec{BA}=-\vec{AB}$
+
+
+
+
+\subsection*{Addition of Vectors}
+\subsubsection*{Triangle Law of Vector Addition}
+if we have two vectors and  then to add them, they are
+positioned so that the initial point of one coincides with the terminal point of the other
+
+\includegraphics*[scale=0.4]{5.png}
+
+Then, the vector $\vec{a}+\vec{b}$ , represented by the third side AC of the triangle ABC, gives us the sum (or
+resultant) of the vectors  $\vec{a}$ and $\vec{b}$, we have $$\vec{AB}+\vec{BC}=\vec{AC}$$ similarly the vector $\vec{AC'}$ represents the difference of $\vec{a}$ and $\vec{b}$
+
+\subsubsection*{Parallelogram law of Vector Addition}
+If we have two vectors $\vec{a}$ and $\vec{b}$ represented
+by the two adjacent sides of a parallelogram
+in magnitude and direction , then their
+sum $\vec{a}+\vec{b}$
+is represented in magnitude and
+direction by the diagonal of the parallelogram
+through their common point. This is known as
+the parallelogram law of vector addition.
+
+\includegraphics*[scale =0.5]{6.png}
+
+\subsubsection*{Properties of Vector Addition}
+\begin{itemize}
+    \item $\vec{a}+\vec{b}=\vec{b}+\vec{a}$ (Commutative Property)
+    \item $ (\vec{a} + \vec{b})+\vec{c}=\vec{a}+(\vec{b}+\vec{c})$ (Associative Property)
+\end{itemize}
+
+\subsubsection*{Multiplication of Vector by a Scalar}
+Let be $\vec{a}$ given vector and $\lambda$ a scalar. Then the product of the vector by the scalar
+$\lambda$, denoted as $\lambda \vec{a}$ , is called the multiplication of vector by the scalar $\lambda$.The vector $\lambda$ has the direction same (or
+opposite) to that of vector according as the value of $\lambda$ is positive (or negative). Also,
+the magnitude of vector $\lambda \vec{a}$ is $| \lambda |$ times the magnitude of the vector $\vec{a}$ $$|\lambda \vec{a}|=|\lambda||\vec{a}|$$
+\includegraphics*[scale=0.37]{7.png}
+
+\subsubsection*{Components of a Vector}
+Let $\hat{i}, \hat{j}, \hat{k}$ be the unit vectors along the x-axis, y-axis, z-axis respectively. The point P(x, y, z) be a point in space. Then the position vector of the point P can be expressed in component form as $$\vec{OP}=x \hat{i}+y \hat{j}+z \hat{k}$$ and $$|\vec{OP}|=\sqrt{x^2+ y^2+z^2}$$
+\includegraphics*[scale=0.5]{8.png}
+
+This form of any vector is called its \textbf{component form}. Here, $x, y$ and $z$ are called
+as the \textbf{scalar components} of r , and $x\hat{i}, y\hat{j}$ and $z \hat{k}$ are called the \textbf{vector components}
+of r along the respective axes. Sometimes x, y and z are also termed as \textbf{rectangular
+components}.
+\subsubsection*{Addition and scalar multiplication in component form}
+Let $\vec{a}=a_1 \hat{i}+a_2 \hat{j}+a_3 \hat{k}$ and $\vec{b}=b_1 \hat{i}+b_2 \hat{j}+b_3 \hat{k}$ be two vectors, $\lambda$ be a scalar then \begin{itemize}
+    \item $\vec{a}+\vec{b}=(a_1+b_1)\hat{i}+(a_2+b_2)\hat{j}+(a_3+b_3)\hat{k}$
+    \item $\vec{a}-\vec{b}=(a_1-b_1)\hat{i}+(a_2-b_2)\hat{j}+(a_3-b_3)\hat{k}$
+    \item $\lambda \vec{a}=\lambda a_1 \hat{i}+\lambda a_2 \hat{j}+\lambda a_3 \hat{k}$
+
+
+    \item Two vectors are equal if  and only if coefficient of all unit vectors are equal 
+    \item unit vector in the direction of vector $\vec{a}$ is $\frac{\vec{a}}{|\vec{a}|}$
+    \item For a vector $\vec{r}=a \hat{i}+b \hat{j}+c \hat{k}$ the direction cosines are $l=\frac{a}{|r|},m=\frac{b}{|r|},n=\frac{c}{|r|}$
+\end{itemize}
+
+
+
+\subsubsection*{Vector Joining two points}
+If $P_1(x_1, y_1, z_1)$ and $P_2(x_2, y_2, z_2)$ are two points, then the vector joining $P_1$ and $P_2$ is the vector $\vec{P_1 P_2}$ $$\vec{P_1P_2}=(x_2-x_1)\hat{i}+(y_2-y_1) \hat{j}+(z_1-z_2) \hat{k}$$
+
+
+\subsubsection*{Section formula}
+Let P and Q be two points represented by the position vectors $\vec{OP}$ and $\vec{OQ}$ with respect to the origin O
+,then the position vector of the point R which divides PQ in the ratio $m:n$ \textbf{internally}  is
+\begin{center}\includegraphics*[scale=0.5]{9.png} \end{center} 
+$$\vec{r}=\frac{m\vec{b}+n\vec{a}}{m+n}$$
+Position vector of the point R which divides PQ in the ratio $m:n$ \textbf{externally}  is 
+\begin{center}
+    \includegraphics*[scale=0.5]{10.png}
+\end{center}
+$$\vec{r}=\frac{m\vec{b}-n\vec{a}}{m-n}$$
+
+If R is the midpoint of PQ then $\vec{r}=\frac{\vec{a}+\vec{b}}{2}$
+
+
+
+\subsection*{Scalar Product of Vectors(Dot)} 
+The scalar product of two nonzero vectors $\vec{a}$ and $\vec{b}$ , denoted by $\vec{a}.\vec{b}$ , is defined as $$\vec{a}.\vec{b}=|\vec{a}||\vec{b}| cos(\theta)$$ where $\theta$ is the angle between $\vec{a}$ and $\vec{b}$
+
+\subsubsection*{Observations}
+\begin{enumerate}
+    \item $\vec{a}.\vec{b}$ is a real number
+    \item Let $\vec{a}$ and $\vec{b}$ are two nonzero vectors , then $\vec{a}.\vec{b}=0$ if and only if $\vec{a}$ and $\vec{b}$ are perpendicular to each other 
+    \item If $\theta=0$ then $\vec{a}.\vec{b}=|\vec{a}||\vec{b}|$, In particular $\vec{a}.\vec{a}=|\vec{a}|^2$
+    \item  If $\theta=\pi$ then $\vec{a}.\vec{b}=-|\vec{a}||\vec{b}|$, In particular $\vec{a}.\vec{a}=-|\vec{a}|^2$
+    \item $\hat{i}.\hat{i}=\hat{j}.\hat{j}=\hat{k}.\hat{k}=1$,$\hat{i}.\hat{j}=\hat{j}.\hat{k}=\hat{k}.\hat{i}=0$
+    \item The angle between two nonzero vectors is given by $$cos(\theta)=\frac{\vec{a}.\vec{b}}{|\vec{a}||\vec{b}|}$$
+    \item Scalar Product is Commutative , ie $\vec{a}.\vec{b}=\vec{b}.\vec{a}$
+    \item $\vec{a}.(\vec{b}+\vec{c})=\vec{a}.\vec{b}+\vec{a}.\vec{c}$
+    \item If $\vec{a}=a_1 \hat{i}+a_2 \hat{j}+a_3 \hat{k}, \vec{b}=b_1\hat{i}+b_2 \hat{j}+b_3 \hat{k}$ then $$\vec{a}.\vec{b}=a_1b_1+a_2b_2+a_3b_3$$
+\end{enumerate}
+\subsubsection*{Projection of a vector on a line}
+Suppose a vector $\vec{AB}$ makes an angle $\theta$ with a given directed line l . Then the projection of $\vec{AB}$
+on l is a vector $\vec{p}$ with magnitude $|AB| cos \theta$
+, and the direction of being the same (or opposite)
+to that of the line l, depending upon whether $cos \theta$ is positive or negative.
+
+\begin{center}
+    \includegraphics*[scale=0.5]{11.png}
+
+\end{center}
+The vector $\vec{p}$ is called \textbf{Projection vector } and its magnitude $|\vec{p}|$ is simply called as the \textbf{projection}
+of the vector $\vec{AB}$ on the directed line l.
+\begin{enumerate}
+    \item If $\hat{p}$ is the unit vector along a line l, then the projection of a vector $\vec{a}$ on the line
+    l is given by $\vec{a}.\hat{p}$
+    \item Projection of a vector $\vec{a}$ on other vector $\vec{b}$ , is given by $$ \frac{\vec{a}.\vec{b}}{|\vec{b}|}$$
+    \item If $\theta =0$ then projection vector of $\vec{AB}$ will be $\vec{AB}$ itself, if $\theta=\pi$ then projection vector of $\vec{AB}$ will be $\vec{BA}$
+    \item If $\theta=\frac{\pi}{2}$ or $\frac{3\pi}{2}$ then the projection vector of $\vec{AB}$ will be zero vector.(perpendicular)
+\end{enumerate}
+
+\subsection*{Vector (or cross) product of two vectors}
+The vector product of two nonzero vectors $\vec{a}$ and $\vec{b}$, is denoted by $\vec{a} \times \vec{b}$ and defined as $$\vec{a} \times \vec{b}=|\vec{a}||\vec{b}|sin \theta \hat{n}$$
+where $\theta$ is the angle between $\vec{a}$ and $\vec{b}$ and $\hat{n}$ is the unit vector perpendicular to both $\vec{a}$ and $\vec{b}$
+\begin{center}
+    \includegraphics*[scale =0.5]{12.png}
+
+\end{center}
+
+\begin{itemize}
+    \item $\vec{a} \times \vec{b}$ is a vector 
+    \item For nonzero vectors $\vec{a}$ and $\vec{b}$ $\vec{a} \times \vec{b}=0$ if and only if $\vec{a}$ and $\vec{b}$ are parallel (angle=0)
+    \item If $\theta =\frac{\pi}{2}$ then $\vec{a} \times \vec{b}=|\vec{a}||\vec{b}|$
+    \item $\hat{i} \times \hat{i}=\hat{j} \times \hat{j}=\hat{k} \times \hat{k}=0$ \\ $\hat{i} \times \hat{j}=\hat{k},\hat{j} \times \hat{k}= \hat{i},\hat{k} \times \hat{i}=\hat{j}$
+    \item Angel between two vectors is $$\frac{|\vec{a} \times \vec{b}|}{|\vec{a}||\vec{b}|}$$
+    \item Vector product is not Commutative $\vec{a} \times \vec{b}=-\vec{b} \times \vec{a}$ So $\hat{j} \times \hat{i}=-\hat{k},\hat{k} \times \hat{j}=-\hat{i},\hat{i} \times \hat{k}=-\hat{j}$
+    \item If $\vec{a}$ and $\vec{b}$ are adjacent sides of a triangle then $$Area =\frac{1}{2} |\vec{a} \times \vec{b}|$$
+    \item If $\vec{a}$ and $\vec{b}$ are adjacent sides of a Parallelogram then $$Area = |\vec{a} \times \vec{b}|$$
+    \item If two vectors are in component form then $$\vec{a} \times \vec{b}=\begin{vmatrix}
+        \hat{i} & \hat{j} & \hat{k} \\
+        a_1 & a_2 & a_3 \\
+        b_1 & b_2 & b_3
+    \end{vmatrix}$$
+
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+\end{multicols*}
+\end{document}

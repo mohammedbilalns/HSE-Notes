@@ -1,0 +1,218 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[margin=2cm]{geometry}
+\usepackage{multicol,amsmath, amssymb}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{pgfplots}
+\usepackage{tikz}
+
+\titleformat{\subsection}
+{\color{red}\normalfont\Large\bfseries}
+{\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}
+{\color{blue}\normalfont\large\bfseries}
+{\thesubsubsection}{1em}{}
+
+\titlespacing{\subsection}{0pt}{0pt}{0pt} % Adjust the spacing here
+\titlespacing{\subsubsection}{0pt}{\baselineskip}{0pt} % Adjust the spacing here
+\newcommand{\summation}[2]{\sum\limits^{#1}_{#2}}
+\usepackage{fancyhdr}
+\usepackage{hyperref} % For hyperlinks
+
+% Define the URL for the footer
+\newcommand{\myURL}{https://mohammedbilalns.github.io/Math-Demystified/}
+
+% Set up fancy headers and footers
+\pagestyle{fancy}
+\fancyhf{} % Clear header and footer
+\rfoot{\href{\myURL}{\myURL}} % Set the right part of the footer as a hyperlink
+
+\begin{document}
+\begin{center}
+    {\LARGE \textbf{Determinants} }
+\end{center}
+
+    
+
+
+\subsection*{Determinant}
+Determinant is a real number associated with a square matrix $A=[a_{ij}]$ of order n. The determinant of matrix A is denoted by $|A|$ or $det()$
+
+If A=$\begin{bmatrix}
+    a & b \\
+    c & d
+\end{bmatrix}$ then determinant of A  is denoted as $$det(A)=|A|=\begin{vmatrix} 
+    a & b \\
+    c & d
+\end{vmatrix}$$
+
+\subsubsection*{Determinant of matrix of order 1}
+For matrix $A=\begin{bmatrix}
+    a
+\end{bmatrix}$ of order 1 $|A|=a$
+
+\subsubsection*{Determinant of matrix of order 2}
+Let $A=\begin{bmatrix}
+    a_{11} & a_{12} \\
+    a_{21} & a_{22} 
+\end{bmatrix}$ be a square matrix of order 2 then  $$det(A)=|A|=\begin{vmatrix}
+    a_{11} & a_{12} \\
+    a_{21} & a_{22} 
+\end{vmatrix} = a_{11}a_{22}-a_{12}a_{21}$$
+
+\subsubsection*{Determinant of matrix of order 3}
+Let $A=\begin{bmatrix}
+    a_{11} & a_{12} & a_{13} \\
+    a_{21} & a_{22} & a_{23} \\
+    a_{31} & a_{32} & a_{33}
+\end{bmatrix}$ be a square matrix of order 3
+
+\textbf{Expansion along first Row ($\mathbf{R_1}$)}
+
+$$|A|=(-1)^{1+1} a_{11} \begin{vmatrix}
+    a_{22} & a_{23} \\
+    a_{32} & a_{33}
+ \end{vmatrix}+(-1)^{1+2}a_{12} \begin{vmatrix}
+    a_{21} & a_{23} \\
+    a_{31} & a_{33}
+ \end{vmatrix}+(-1)^{1+3} a_{13}\begin{vmatrix}
+    a_{21} & a_{22} \\
+    a_{31} & a_{32}
+ \end{vmatrix}$$
+\textcolor{gray}{1+1, 1+2 ,1+3 are sum of positions of $a_{11},a_{12},a_{13}$ respectively, matrix of order 2 is chosen by removing row and column containing $a_{11},a_{12},a_{13}$ respectively} 
+
+similarly we can find Determinants with other rows and columns  too
+
+\textbf{Remarks}
+
+\begin{itemize}
+    \item For easier calculations choose the row/columns with maximum number of zeroes 
+    \item If $A=kB$ then $|A|=k|B|$
+    \item If $A=k^n B$ then $|A|=k^n|B|$
+\end{itemize}
+
+\subsection*{Area of a Triangle}
+Area of a  Triangle with vertices $(x_1,y_1),(x_2,y_2)$ and $(x_3,y_3)$ is $$A=\frac{1}{2}\begin{vmatrix}
+    x_1 & y_1 & 1 \\
+    x_2 & y_2 & 1 \\
+    x_3 & y_3 & 1
+\end{vmatrix}$$
+
+\subsection*{Minors and Cofactors}
+\textbf{Minor} of an element $a_{ij}$ of a determinant is the determinant obtained by
+deleting its ith row and jth column in which element $a_{ij}$ lies. Minor of an element $a_{ij}$ is
+denoted by $M_{ij}$.
+
+\textbf{Cofactor} of an element $a_{ij}$ , denoted by $A_{ij}$ is defined by $$A_{ij}=(-1)^{i+j}M_{ij}$$ where $M_{ij}$ is the minor of $a_{ij}$
+
+
+
+
+
+\subsection*{Adjoint and Inverse of a matrix }
+The \textbf{adjoint} of a matrix $A=[a_{ij}]_{n \times n}$ is defined as the transpose of
+the matrix $A=[a_{ij}]_{n \times n}$, where $A_{ij}$ is the cofactor of the element $a_{ij}$ . Adjoint of the matrix A
+is denoted by adj A $$adj \begin{bmatrix}
+    a_{11} & a_{12} & a_{13} \\
+    a_{21} & a_{22} & a_{23} \\
+    a_{31} & a_{32} & a_{33}
+\end{bmatrix}=\text{Transpose of }\begin{bmatrix}
+    A_{11} & A_{12} & A_{13} \\
+    A_{21} & A_{22} & A_{23} \\
+    A_{31} & A_{32} & A_{33}
+\end{bmatrix}$$
+
+\begin{itemize}
+    \item $adj \begin{bmatrix}
+        a_{11} & a_{12} \\
+        a_{21} & a_{22}
+    \end{bmatrix}=\begin{bmatrix}
+        a_{22} & -a_{12} \\
+        -a_{21} & a_{11}
+    \end{bmatrix}$
+    \item \textbf{Theorem 1} - If A be any given square matrix of order n, then $$A(adj A)=(adj A) A =|A|I$$ where I is the identity matrix 
+\end{itemize}
+
+
+\subsubsection*{Singular Matrix}
+A square matrix A is said to be \textbf{singular} if $|A| = 0$, \textbf{non singular} if $|A| \not =0$ 
+
+\begin{itemize}
+    \item \textbf{Theorem 2} - If A and B are nonsingular matrices of the same order, then AB and BA
+    are also nonsingular matrices of the same order.
+    \item \textbf{Theorem 3} - The determinant of the product of matrices is equal to product of their
+    respective determinants, that is,$ |AB| = |A| |B|$ , where A and B are square matrices of
+    the same order
+    \item $|(adj A)A|= \begin{vmatrix}
+        |A| & 0 & 0 \\
+        0 & |A| & 0 \\
+        0 & 0 & |A|
+    \end{vmatrix}$
+    \item \textbf{Theorem 4} - A square matrix A is invertible if and only if A is nonsingular matrix.
+    \item  $A^{-1}=\frac{adj A}{|A|}$
+\end{itemize}
+
+\subsection*{Applications of Determinants and Matrices}
+
+\subsubsection*{Consistent and inconsistent System}
+A system of equations is said to be \textbf{consistent} if its solution (one
+or more) exists.
+
+A system of equations is said to be \textbf{inconsistent} if its solution
+does not exist.
+
+\subsubsection*{Solution of system of linear equations using inverse of a matrix}
+Consider the system of equations
+    $$a_1 x+ b_1 y +c_1 z = d_1$$
+   $$a_2 x+ b_2 y +c_2 z = d_2 $$
+    $$a_3 x+ b_3 y +c_3 z = d_3$$
+Let $A=\begin{bmatrix}
+    a_1 & b_1 & c_1 \\
+    a_2 & b_2 & c_2 \\
+    a_3 & b_3 & c_3 
+\end{bmatrix}, X = \begin{bmatrix}
+    x \\
+    y \\
+    z
+\end{bmatrix},B=\begin{bmatrix}
+    d_1 \\
+    d_2 \\
+    d_3
+\end{bmatrix}$
+
+Then, the system of equations can be written as, $AX = B$, i.e.,
+$$A=\begin{bmatrix}
+    a_1 & b_1 & c_1 \\
+    a_2 & b_2 & c_2 \\
+    a_3 & b_3 & c_3 
+\end{bmatrix} \begin{bmatrix}
+    x \\
+    y \\
+    z
+\end{bmatrix} =\begin{bmatrix}
+    d_1 \\
+    d_2 \\
+    d_3
+\end{bmatrix}$$
+
+
+\textbf{case 1} If A is a nonsingular matrix, then its inverse exists, so solution is $X=A^{-1}B$
+$$\begin{bmatrix}
+    x \\
+    y \\
+    z
+\end{bmatrix}=\begin{bmatrix}
+    a_1 & b_1 & c_1 \\
+    a_2 & b_2 & c_2 \\
+    a_3 & b_3 & c_3 
+\end{bmatrix}^{-1} \begin{bmatrix}
+    d_1 \\
+    d_2 \\
+    d_3
+\end{bmatrix}$$
+
+\textbf{case 2}If A is a singular matrix, then $| A | = 0$. then solution does not exist and the
+system of equations is called inconsistent.
+\end{document}

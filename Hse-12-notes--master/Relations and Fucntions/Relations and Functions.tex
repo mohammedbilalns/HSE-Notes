@@ -1,0 +1,107 @@
+\documentclass[11pt]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[margin=2cm]{geometry}
+\usepackage{multicol,amsmath, amssymb}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{pgfplots}
+\usepackage[scaled=1.12]{nimbusmononarrow}% typewriter font
+\usepackage[sfdefault,subscriptcorrection]{notomath} 
+\newcommand{\notinsyllabus}[1]{
+    \begin{center}
+        \fcolorbox{red}{yellow!20}{\parbox{0.9\linewidth}{
+            \textbf{Not in latest Syllabus:} #1
+        }}
+    \end{center}
+}
+\titleformat{\subsection}
+{\color{red}\normalfont\Large\bfseries}
+{\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}
+{\color{blue}\normalfont\large\bfseries}
+{\thesubsubsection}{1em}{}
+
+\titlespacing{\subsection}{0pt}{0pt}{0pt} % Adjust the spacing here
+\titlespacing{\subsubsection}{0pt}{\baselineskip}{0pt} % Adjust the spacing here
+\newcommand{\summation}[2]{\sum\limits^{#1}_{#2}}
+\usepackage{fancyhdr}
+\usepackage{hyperref} % For hyperlinks
+
+% Define the URL for the footer
+\newcommand{\myURL}{https://mohammedbilalns.github.io/Math-Demystified/}
+
+% Set up fancy headers and footers
+\pagestyle{fancy}
+\fancyhf{} % Clear header and footer
+\rfoot{\href{\myURL}{\myURL}} % Set the right part of the footer as a hyperlink
+
+\begin{document}
+\begin{center}
+    {\LARGE \textbf{Relations and functions} }
+\end{center}
+
+\begin{multicols}{2}
+
+    A relation from a non-empty set A to a non-empty set B is a subset of A × B.
+    
+    In this chapter we study different types of relations and functions, composition of functions, and binary operations.
+    \subsubsection*{Examples}
+    \begin{itemize}
+        \item $\{(a,b) \in A \times B: \text{a is brother of b}\}$
+		\item $\{(a,b) \in A \times B:$ age of a is greater than age of b\}
+    \end{itemize}
+
+    \subsection*{Types of Relations }
+    \begin{itemize}
+        \item \textbf{Empty Relation:} $R:A \rightarrow A$ given by $R=\phi \subset A \times A$
+        \item \textbf{Universal Relation} $R:A \rightarrow A$ given by $R=A \times A$
+        \item \textbf{Reflexive Relation} $R:A \rightarrow A$ with $(a,a) \in R, \forall a \in A$
+        \item \textbf{Symmetric Relation} $R:A \rightarrow A$ with $(a,b) \in R \Rightarrow (b,a) \in R, a,b \in A$
+        \item \textbf{Transitive Relation} $R:A \rightarrow A$ with $(a,b) \in R $ and $(b,c) \in R \Rightarrow (a,c) \in R$
+        \item \textbf{Equivalence Relation} Relation which is Reflexive , Symmetric and Transitive.
+    \end{itemize}
+    \subsubsection*{Equivalence Class}
+    Let A be an Equivalence Relation in a set A. If $a \in A$, then the subset $\{x \in A ,(x,a) \in R \}$ of A is called the Equivalence class corresponding to 'a' and is denoted by $[a]$.
+
+\subsection*{Types of functions}
+\subsubsection*{One-One or Injective function.}
+A function $f : A \rightarrow B$ is said to be \emph{One-One} or \emph{Injective}, if the image of distinct elements of A under $f$ are distinct. 
+
+i.e;$ f(x_1) = f(x_2) \Rightarrow x_1 = x_2$.
+
+Otherwise, f is called many-one.
+
+If lines parallel to x-axis meet the curve at two or more points, then the function is not one-one.
+
+\subsubsection*{Onto or Surjective function}
+A function $f : A \rightarrow B$ is said to be \emph{Onto} or \emph{Surjective}, if every element of $B$ is some image of some elements of $A$ under $f$.
+
+ie; If for every element $y \in Y$ then there exists an element $x$ in $A$ such that $f(x) = y$.
+\subsubsection*{Bijective Functions}
+A function $f : A \rightarrow B$ is said to be Bijective if it is both One-One and Onto.
+\notinsyllabus{
+\subsection*{Composition of functions and Invertible function}
+\subsubsection*{Composition of Functions.}
+Let $f : A \rightarrow B$ and $g : B \rightarrow C$ be two functions. Then the composition of $f$ and $g$ denoted by is $gof$ defined
+$gof : A \rightarrow C$ and $gof (x) = g(f(x))$.
+
+\begin{itemize}
+    \item If $f : A \rightarrow B$ and $g : B \rightarrow C$ are One-One, then $gof : A \rightarrow C$ is One-One.
+    \item If $f : A \rightarrow B$ and $g : B \rightarrow C$ are Onto, then $gof : A \rightarrow C$ is Onto.gof : A → C
+    \item If $f : A \rightarrow B$ and $g : B \rightarrow C$ are Bijective,  $ \iff gof : A \rightarrow C$ is Bijective.
+\end{itemize}
+
+\subsection*{Inverse of a  Function}
+If $f : A \rightarrow B$ is defined to be invertible, if there exists a function $g : B \rightarrow A$ such that $gof = I_A$ and
+$fog = I_B$. The function $g$ is called the inverse of $'f'$ and is denoted by $f^{-1}$.
+
+\begin{itemize}
+    \item If function $f : A \rightarrow B$ is invertible only if $f$ is bijective.
+    \item $(gof)^{-1} = f^{-1}og^{-1}$.
+\end{itemize}
+
+}
+\end{multicols}
+
+\end{document}

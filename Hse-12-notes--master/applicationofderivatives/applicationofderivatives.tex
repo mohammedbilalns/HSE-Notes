@@ -1,0 +1,158 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[margin=2cm]{geometry}
+\usepackage{multicol,amsmath, amssymb}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{pgfplots}
+
+\titleformat{\subsection}
+{\color{red}\normalfont\Large\bfseries}
+{\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}
+{\color{blue}\normalfont\large\bfseries}
+{\thesubsubsection}{1em}{}
+
+\titlespacing{\subsection}{0pt}{0pt}{0pt} % Adjust the spacing here
+\titlespacing{\subsubsection}{0pt}{\baselineskip}{0pt} % Adjust the spacing here
+\newcommand{\summation}[2]{\sum\limits^{#1}_{#2}}
+
+\usepackage{fancyhdr}
+\usepackage{hyperref} % For hyperlinks
+
+% Define the URL for the footer
+\newcommand{\myURL}{https://mohammedbilalns.github.io/Math-Demystified/}
+
+% Set up fancy headers and footers
+\pagestyle{fancy}
+\fancyhf{} % Clear header and footer
+\rfoot{\href{\myURL}{\myURL}} % Set the right part of the footer as a hyperlink
+
+\begin{document}
+\begin{center}
+    {\LARGE \textbf{Application of Derivatives} }
+\end{center}
+
+
+    In this chapter we analyses the physical and geometrical applications of derivatives in real life such as to determine rate of change, to find tangents and normal to a curve, to find turning points, intervals in which the curve is increasing and decreasing, to find approximate value of certain quantities.
+    \subsection*{Rate of Change}
+    By $\frac{dy}{dx}$,we mean the rate of change of $y$ with respect to $x$. If $s$ is the displacement function in terms of $t$ and $v$ the velocity at that time. Then $$velocity\, = \frac{ds}{dt}$$  $$acceleration = \frac{dv}{dt}=\frac{d^2 s}{dt^2}$$
+
+    \subsection*{Increasing and Decreasing Functions}
+    Let $I$ be an interval contained in the domain of a real valued function $f$.
+Then $f$ is said to be \begin{enumerate}
+    \item  \textbf{increasing} on $I$ if $x_1 < x_2$ in $I \Rightarrow f(x_1) \leq f(x_2)$ for all $x_1, x_2 \in I$.
+    \item \textbf{strictly increasing}  on $I$ if $x_1 < x_2$ in $I \Rightarrow f(x_1) < f(x_2)$ for all $x_1, x_2 \in I$.
+    \item  \textbf{decreasing} on $I$ if $x_1 < x_2$ in $I \Rightarrow f(x_1) \geq f(x_2)$ for all $x_1, x_2 \in I$.
+    \item  \textbf{strictly decreasing} on $I$ if $x_1 < x_2$ in $I \Rightarrow f(x_1) > f(x_2)$ for all $x_1, x_2 \in I$.
+
+    \item  \textbf{constant} on $I$, if $f(x) = c$ for all $x \in I$, where $c$ is a constant.
+    
+\end{enumerate}
+Let $x_0$ be a point in the domain of definition of a real valued function $f$.
+    Then $f$ is said to be increasing, decreasing at $x_0$ if there exists an open interval $I$
+    containing $x_0$ such that $f$ is increasing, decreasing, respectively, in $I$.
+
+    \subsubsection*{Theorem 1}
+    Let f be continuous on $[a, b]$ and differentiable on the open interval
+$(a,b)$. Then \begin{enumerate}
+    \item $f$ is increasing in $[a,b]$ if $f'(x) > 0$ for each $x \in(a, b)$
+    \item $f$ is decreasing in $[a,b]$ if $f'(x) < 0$ for each $x \in(a, b)$
+    \item $f$ is constant in $[a,b]$ if $f'(x) = 0$ for each $x \in(a, b)$
+
+
+\end{enumerate}
+
+\subsection*{Maxima and Minima}
+Let $f$ be a function defined on an interval $I$. Then \begin{enumerate}
+    \item f is said to have a \textbf{maximum value} in $I$, if there exists a point $c$ in $I$ such that
+    $f (c) > f ( x )$ , for all $x \in I$
+
+    The number $f (c)$ is called the \textbf{maximum value} of $f$ in $I$ and the point $c$ is called a
+\textbf{point of maximum value} of f in I.
+
+    \item $f$ is said to have a \textbf{minimum value} in $I$, if there exists a point $c$ in $I$ such that
+    $f (c) < f (x)$, for all $x \in I$.
+
+    The number $f (c)$,is called the \textbf{minimum value} of $f$ in $I$ and the point
+$c$, is called a \textbf{point of minimum value} of f in I.
+\item $f$ is said to have an \textbf{extreme value} in $I$ if there exists a point $c$ in $I$ such that
+$f (c)$ is either a maximum value or a minimum value of $f$ in $I$.
+
+The number $f (c)$, in this case, is called an extreme value of $f$ in $I$ and the point $c$
+is called an \textbf{extreme point}.
+
+
+
+\end{enumerate}
+\subsubsection*{Local Minma and Local Maxima }
+Let $f$ be a real valued function and let $c$ be an interior point in the domain
+of $f$. Then
+\begin{itemize}
+    \item $c$ is called a point of \textbf{local maxima} if there is an $h > 0$ such that $$ f(c) \geq f(x) \, \text{for all $x$ in } (c-h,c+h),x \not = c$$ The value of $f(c)$ is called \textbf{local maximum} value of $f$
+    \item $c$ is called a point of \textbf{local minima} if there is an $h > 0$ such that $$ f(c) \leq f(x) \, \text{for all $x$ in } (c-h,c+h),x \not = c$$ The value of $f(c)$ is called \textbf{local minimum} value of $f$
+
+\end{itemize}
+\subsubsection*{Theorem 2}
+Let $f$ be a function defined on an open interval $I$. Suppose $c \in I$ be any
+point. If $f$ has a local maxima or a local minima at $x = c$, then either $f'(c) = 0$ or $f$ is not
+differentiable at $c$.
+
+\subsubsection*{Theorem 3 (First Derivative Test)}
+\begin{enumerate}
+    \item If $f'(c) = 0$ and $f'(x)$ changes its sign from positive to negative from left to right of $x = c$, then the point is a local maximum point.
+    \item If $f'(c) = 0 $ and $f'(x)$ changes its sign from negative to positive from left to right of $x = c$, then the point is a local minimum point.
+    \item If $f'(c) = 0$ and if there is no change of sign for $f'(x)$ from left to right of $x = c$, then the point is a inflexion point.
+\end{enumerate}
+\subsubsection*{Theorem 4 (Second Derivative Test)}
+Let $f$ be a function defined on an interval $I$
+and $c \in I$. Let $f$ be twice differentiable at $c$. Then
+\begin{enumerate}
+    \item If $f'(c) = 0$ and $f”(c) < 0$ , then $x = c$ is a local maximum point.
+    \item If $f'(c) = 0$ and $f”(c) > 0$, then $x = c$ is a local minimum point.
+    \item If $f'(c) = 0$ and $f”(c) = 0$, then the test fails and go to first derivate test for checking maxima and minima.
+\end{enumerate}
+
+\subsubsection*{Maximum and Minimum Values of a Function in a Closed Interval}
+
+Consider $f(x)=x+1,x \in (0,1)$ .the function is continuous on (0, 1) and neither has a maximum value
+nor has a minimum value. Further, we may note that the function even has neither a
+local maximum value nor a local minimum value.
+
+However, if we extend the domain of $f$ to the closed interval $[0, 1]$, then f still may
+not have a local maximum (minimum) values but it certainly does have maximum value
+$3 = f (1)$ and minimum value $2 = f (0)$. The maximum value $3$ of $f$ at $x = 1$ is called
+\textbf{absolute maximum value} (global maximum or greatest value) of $f$ on the interval
+$[0, 1]$. Similarly, the minimum value $2$ of $f$ at $x = 0$ is called the \textbf{absolute minimum
+value} (global minimum or least value) of $f$ on $[0, 1]$.
+
+\subsubsection*{Theorem 5}
+Let $f$ be a continuous function on an interval $I = [a, b]$. Then $f$ has the
+absolute maximum value and $f$ attains it at least once in $I$. Also, $f$ has the absolute
+minimum value and attains it at least once in $I$
+
+\subsubsection*{Theorem 6}
+Let $f$ be a differentiable function on a closed interval $I$ and let $c$ be any
+interior point of $I$. Then
+\begin{enumerate}
+    \item $f '(c) = 0$ if $f$ attains its absolute maximum value at $c$
+    \item $f'(c) = 0$ if $f$ attains its absolute minimum value at $c$.
+\end{enumerate}
+
+\subsubsection*{Working rule}
+\begin{enumerate}
+    \item Find all critical points of $f$ in the interval, i.e., find points $x$ where either
+    $f ' ( x) = 0$ or $f$ is not differentiable.
+    \item Take the end points of the interval
+    \item At all these points (listed in Step 1 and 2), calculate the values of $f$
+    \item Identify the maximum and minimum values of $f$ out of the values calculated in
+    Step 3. This maximum value will be the absolute maximum (greatest) value of
+    $f$ and the minimum value will be the absolute minimum (least) value of $f$ .
+\end{enumerate}
+
+
+
+
+
+\end{document}

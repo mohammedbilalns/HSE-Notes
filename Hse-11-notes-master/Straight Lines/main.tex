@@ -1,0 +1,98 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[margin=2cm]{geometry}
+\usepackage{multicol,amsmath, amssymb}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{pgfplots}
+
+\titleformat{\subsection}
+{\color{red}\normalfont\large\bfseries}
+{\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}
+{\color{blue}\normalfont\large\bfseries}
+{\thesubsubsection}{1em}{}
+
+\titlespacing{\subsection}{0pt}{0pt}{0pt} % Adjust the spacing here
+\titlespacing{\subsubsection}{0pt}{\baselineskip}{0pt} % Adjust the spacing here
+
+\usepackage{fancyhdr}
+\usepackage{hyperref} % For hyperlinks
+
+% Define the URL for the footer
+\newcommand{\myURL}{https://mohammedbilalns.github.io/Math-Demystified/}
+
+% Set up fancy headers and footers
+\pagestyle{fancy}
+\fancyhf{} % Clear header and footer
+\rfoot{\href{\myURL}{\myURL}} % Set the right part of the footer as a hyperlink
+
+\begin{document}
+\begin{center}
+    {\LARGE \textbf{STRAIGHT LINES} }
+\end{center}
+
+\begin{multicols}{2}
+
+\subsubsection*{Distance between two points}
+    Distance between two points $(x_1,y_1)$ and $(x_2,y_2)$ is 
+    $$d=\sqrt{(x_1-y_1)^2+(x_2-y_2)^2}$$
+
+    midpoint of line joining two points $(x_1,y_1)$ and $(x_2,y_2)$ is 
+    $$(\frac{x_1+x_2}{2}),(\frac{y_1+y_2}{2})$$
+\subsection*{Slope of a line }
+The slope of a line is the $'tan'$ of the angle the line makes with the positive direction of the x-axis. If $\theta$ is the angle then, slope = $tan \theta$.
+
+The slope of a line passing through two points $(x_1, y_1)$ and $(x_2, y_2)$ is $\frac{y_2 -y_1}{x_2 -x_1}$
+\begin{itemize}
+    \item The slope of the $x$-axis is zero and that of the $y$-axis is not defined.
+    \item Parallel lines have the same slope.
+    \item The product of the slopes of perpendicular lines is -1.
+    \item The slope is positive if $\theta < 90^{\circ}$. The slope is negative if $\theta > 90^{\circ}$.
+    \item If three points A, B, and C are collinear, then AB and BC have the same slope.
+    \item If $m_1$ and $m_2$ be slopes of two lines then, $\theta$ the angle between is given by $tan \theta =|\frac{m_2-m_1}{1+m_1m_2}|, 1+m_1m_2 \not =0$
+\end{itemize}
+\subsection*{Equation of a line}
+\begin{itemize}
+    \item Equation of x-axis is $y = 0$.
+    \item Equation of y-axis is $x = 0$.
+    \item The equation of a horizontal line is $y = a$. If $'a'$ is positive then the line is above the x-axis and if negative it will be below the x-axis.
+    \item The equation of a vertical line is $x = a$. If $'a'$ is positive then the line is to the right of the x-axis and if negative it will be to the left of the x-axis.
+\end{itemize}
+\subsubsection*{Point-slope form }
+
+$y - y_1 = m(x - x_1)$, where $'m'$ is the slope and $(x_1, y_1)$ is a point on the line.
+
+\subsubsection*{Two-Point form}
+
+$y - y_1 = \frac{y_2-y_1}{x_2-x_1 }(x - x_1$) where $(x_1, y_1)$ and $(x_2, y_2)$ are two point on the line.
+
+\subsubsection*{Slope intercept form}
+
+1. y = mx + c, where $m$ is the slope and $c$ is the y-intercept.
+2. y = m(x - d), where $m$ is the slope and $d$ is the x-intercept.
+
+\subsubsection*{Intercept form}
+$\frac{x}{a}+\frac{y}{n}=1$ , where $a$ and $b$ are x and y intercept respectively.
+
+\subsubsection*{Normal form }
+$ x cos \theta + y sin \theta = p$, where $p$ is the length of the normal from the origin to the line and $\theta$ is the angle the normal makes with the positive direction of the x-axis.
+
+\subsection*{General Equation of a line }
+General equation of a Line: $ax + by + c = 0$, where a, b and c are real constants.
+
+\begin{itemize}
+    \item x intercept of the line $ax + by + c = 0$ is $\frac{-c}{a}$
+    \item y intercept of the line $ax + by + c = 0$ is $\frac{-c}{b}$
+    \item Slope of the line $ax + by + c = 0$ is $\frac{-a}{b}$
+    \item  Parallel lines differ in constant term, i.e; a line parallel to $ax + by + c = 0$ is $ax + by + k = 0$.
+    \item  A line perpendicular to $ax + by + c = 0$ is $bx - ay + k = 0$.
+    \item The equation of the family of lines passing through the intersection of the lines $a_1x + b_1y + c_1 = 0$ and $a_2x + b_2y + c_2 = 0$ is of the form $a_1x + b_1y + c_1 + k(a_2x + b_2y + c_2) = 0$.
+    \item The perpendicular distance of a point $(x_1, y_1)$ from the line $ax + by + c = 0$ is $|\frac{ax_1+by_1+c}{\sqrt{a^2+b^2}}|$
+    \item The distance between the parallel lines $ax + by + c = 0$ and $ax + by + k = 0$ is $|\frac{c-k}{\sqrt{a^2+b^2}}|$
+    \item Normal form of the equation $ax + by + c = 0$ is $x cos \theta + y sin \theta = p$; where $cos \theta =\pm \frac{a}{\sqrt{a^2+b^2}}:sin \theta =\pm \frac{b}{\sqrt{a^2+b^2}}$ and $p= \pm,\frac{c}{\sqrt{a^2+b^2}} $
+\end{itemize}
+\end{multicols}
+
+\end{document}

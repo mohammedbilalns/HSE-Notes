@@ -1,0 +1,187 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[margin=2cm]{geometry}
+\usepackage{multicol,amsmath, amssymb}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{pgfplots}
+\usepackage{multirow}
+\definecolor{tablecolor}{RGB}{199, 234, 251}
+\titleformat{\subsection}
+{\color{red}\normalfont\Large\bfseries}
+{\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}
+{\color{blue}\normalfont\large\bfseries}
+{\thesubsubsection}{1em}{}
+
+\titlespacing{\subsection}{0pt}{0pt}{0pt} % Adjust the spacing here
+\titlespacing{\subsubsection}{0pt}{\baselineskip}{0pt} % Adjust the spacing here
+\newcommand{\summation}[2]{\sum\limits^{#1}_{#2}}
+
+\usepackage{fancyhdr}
+\usepackage{hyperref} % For hyperlinks
+
+% Define the URL for the footer
+\newcommand{\myURL}{https://mohammedbilalns.github.io/Math-Demystified/}
+
+% Set up fancy headers and footers
+\pagestyle{fancy}
+\fancyhf{} % Clear header and footer
+\rfoot{\href{\myURL}{\myURL}} % Set the right part of the footer as a hyperlink
+
+
+
+
+\begin{document}
+\begin{center}
+    {\LARGE \textbf{Integrals} }
+\end{center}
+
+
+
+The original motivation for the derivative was
+the problem of defining tangent lines to the graphs of
+functions and calculating the slope of such lines. Integral
+Calculus is motivated by the problem of defining and
+calculating the area of the region bounded by the graph of
+the functions.In this chapter we study different method of find indefinite integral and definite integrals of certain functions and its properties.
+
+\subsection*{Integration}
+Let $\frac{d}{dx}F(x)=f(x)$. then we write $$\int f(x) dx=F(x)+C$$  These integrals are called indefinite integrals and C is the constant of integration.
+
+
+For the sake of convenience, we mention below the following symbols/terms/phrases
+with their meanings as given in the Table
+
+\begin{center}
+
+\begingroup\setlength{\fboxsep}{0pt}
+\colorbox{tablecolor}{%r}
+
+    \begin{tabular}{ |c|c| } 
+    \hline 
+     \textbf{Symbols/Terms/Phrases} & \textbf{Meaning}  \\ [2.5ex]
+    \hline \hline
+     $\int f(x) dx$ & Integral of $f$ with respect to $x$ \\ 
+     \hline
+     $f(x)$ in $\int f(x) dx$ & Integrand \\ 
+    \hline
+    $x$ in $\int f(x) dx$ & Variable of Integration \\
+    \hline
+    Integrate & Find the integral \\
+    \hline
+    An integral of F & A function F such that $F'(x)=f(x)$ \\
+    \hline
+    Integration & The process of finding integral \\
+    \hline
+    constant of Integration & Any real number C, considered as
+    constant function \\
+    \hline
+
+    \end{tabular}%
+}\endgroup
+
+
+
+
+    \end{center}
+
+\subsubsection*{Some properties}
+    \begin{itemize}
+        \item Indefinite integral is a collection of family of curves, each of which is obtained by translating one of the curves parallel to itself upward or downwards along the y-axis.
+        \item $\int f(x) \pm g(x)=\int f(x) \pm \int g(x)$
+        \item For any real number $k$,$\int k f(x) =k \int f(x)$
+    \end{itemize}
+
+    \subsection*{Some Standard Results}
+    \includegraphics*[scale=0.67]{1.png}
+
+    \includegraphics*[scale=0.67]{2.png}
+
+    \subsection*{Methods of Integration}
+    \subsubsection*{Integration by substitution}
+    The given integral $I = \int f(x)dx$ is transformed into another form by changing the independent variable $x$ to $t$ by substituting $x = g(t)$  So that $\frac{dx}{dt} = g'(t) \Rightarrow dx = g'(t)dt$ $$I=\int f(x) dx =\int f(g(t)) g'(t)dt$$
+
+    \subsubsection*{Some more Standard Results derived using substitution}
+    \begin{itemize}
+        \item $\int tan \,x \, dx =log|sec \, x| +C$
+        \item $\int cot \, x \, dx = log |sin \, x | + C $
+        \item $\int sec \, x \, dx = log |sec \, x + tan \, x| + C $
+        \item $\int cosec \, x \, dx = log |cosec \, x - cot \, x| + C $
+    \end{itemize}
+
+    \subsection*{Integrals of some particular Functions}
+    \begin{enumerate}
+        \item $\int \frac{dx}{x^2-a^2}=\frac{1}{2a} log|\frac{x-a}{x+a}|+C$
+        \item  $\int \frac{dx}{a^2-x^2}=\frac{1}{2a} log|\frac{a+x}{a-x}|+C$
+        \item $\int \frac{dx}{x^2+a^2}=\frac{1}{a} tan^{-1}\frac{x}{a}+C$
+        \item $\int \frac{dx}{\sqrt{x^2-a^2}}=log|x+\sqrt{x^2-a^2}|+C$
+        \item $\int \frac{dx}{\sqrt{x^2+a^2}}=log|x+\sqrt{x^2+a^2}+C|$
+        \item $\int \frac{dx}{\sqrt{a^2-x^2}}= sin^{-1}\frac{x}{a}+C$
+        \item \textbf{To find the integral of the type $\frac{px+q}{ax^2+bx+c}$ and $\frac{px+q}{\sqrt{ax^2+bx+c}}$ } where p , q , a , b , c are constants , we are to find real numbers A, B such that $$px+q=A\frac{d}{dx}(ax^2+bx+c)+B= A (2ax+b)+B$$ To determine A and B, we equate from both sides the coefficients of x and the
+        constant terms. A and B are thus obtained and hence the integral is reduced to
+        one of the known forms.
+    \end{enumerate}
+
+    \subsection*{Integration by Partial Fractions}
+    Consider integrals of the form  $\int \frac{P(x)}{Q(x)} dx $ whre P and Q are polinomials in x and $Q(x) \not = 0$. If the degree of $P(x)$ is less than $Q(x)$, then the rational function is \textbf{Proper rational function} otherwise it is called \textbf{Improper rational function}
+
+
+    If $\frac{P(x)}{Q(x)}$ is improper function, first it should be converted to proper by long division and now it takes the form  $\frac{P(x)}{Q(x)}=T(x)+\frac{P_1(x)}{Q(x)}$    Where T(x) is polynomial in x and    $\frac{P_1(x)}{Q(x)}$     is a proper function.
+
+    Now if $\frac{P(x)}{Q(x)}$     is proper function we factorise the denominator Q(x) into simpler polynomials and decompose into simpler rational function. For this we use the following table.
+
+    \begin{center}
+        \includegraphics*[scale= 0.5]{3.png}
+
+        
+    \end{center}
+
+    \subsection*{Integration by Parts}
+    $$\int f(x) g(x) dx = f(x) \int g(x) dx - \int \left( f'(x) \left[ \int g(x) dx \right] \right) dx $$
+
+    Here the priority of taking first function and second function is more important, for this use order of the letters in words ILATE, where
+
+    \begin{itemize}
+        \item I- Inverse Triganometric function
+        \item L - Logarithmic function 
+        \item A - Algebraic function 
+        \item T - Triganometric function 
+        \item E - Exponential function 
+    \end{itemize}
+    \subsubsection*{A Special case}
+    $$\int e^x [f(x)+f'(x)] dx = e^x f(x)+C$$
+
+
+    \subsection*{Integrals of some more types}
+    \begin{itemize}
+        \item $\int \sqrt{x^2-a^2} dx =\frac{1}{2} x \sqrt{x^2-a^2} -\frac{a^2}{2} log|x+\sqrt{x^2-a^2}|+c$
+        \item $\int \sqrt{x^2+a^2} dx =\frac{1}{2} x \sqrt{x^2+a^2} +\frac{a^2}{2} log|x+\sqrt{x^2+a^2}|+c$
+        \item $\int \sqrt{a^2-x^2}dx = \frac{1}{2} x \sqrt{a^2-x^2}+\frac{a^2}{2}sin^{-1}\frac{x}{a}+c$
+
+    \end{itemize}
+
+    \subsection*{Definite Integral}
+    A definite integral has a unique value. A definite integral is denoted by $\int_a^b f(x) dx$, where a is the upper limit and b is the lower limit of the integral. If $\frac{d}{dx} F(x)=f(x)$ and $\int f(x)dx = F(x) + C$ , then $$ \int_a^b f(x) dx= F(a)-F(b)$$
+
+
+    \subsection*{Fundamental Theorem of Calculus}
+    We have defined $\int_a^b f(x) dx$ as the area of  the region bounded by the curve y = f (x),
+the ordinates $x = a$ and $x = b$ and x-axis.We denote this
+function of x by A(x).$$A(x)=\int_a^b f(x) dx$$
+
+\subsubsection*{First fundamental theorem of integral calculus}
+Let f be a continuous function on the closed interval [a, b] and let A (x) be
+the area function. Then $A'(x) = f (x)$, for all $x \in [a, b].$
+
+\subsubsection*{Second fundamental theorem of integral calculus}
+Let f be continuous function defined on the closed interval [a, b] and F be
+an anti derivative of f. Then $$\int_a^b f(x) dx = [F(x)]_b^a =F(b)-F(a) $$
+
+
+\subsection*{Some Properties of Definite Integrals}
+\begin{center}
+    \includegraphics*[scale=0.5]{41.png}
+\end{center}
+\end{document}

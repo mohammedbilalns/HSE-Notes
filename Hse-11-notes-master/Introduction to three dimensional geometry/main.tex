@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[margin=2cm]{geometry}
+\usepackage{multicol,amsmath, amssymb}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{pgfplots}
+
+\titleformat{\subsection}
+{\color{red}\normalfont\large\bfseries}
+{\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}
+{\color{blue}\normalfont\large\bfseries}
+{\thesubsubsection}{1em}{}
+
+\titlespacing{\subsection}{0pt}{0pt}{0pt} % Adjust the spacing here
+\titlespacing{\subsubsection}{0pt}{\baselineskip}{0pt} % Adjust the spacing here
+
+\usepackage{fancyhdr}
+\usepackage{hyperref} % For hyperlinks
+
+% Define the URL for the footer
+\newcommand{\myURL}{https://mohammedbilalns.github.io/Math-Demystified/}
+
+% Set up fancy headers and footers
+\pagestyle{fancy}
+\fancyhf{} % Clear header and footer
+\rfoot{\href{\myURL}{\myURL}} % Set the right part of the footer as a hyperlink
+
+\begin{document}
+\begin{center}
+    {\LARGE \textbf{Introduction to Three Dimensional Geometry} }
+\end{center}
+
+    To refer to a point in space we require a third axis (say z-axis) which leads to the concept of three-dimensional geometry. In this chapter, we study the basic concept of geometry in three-dimensional space.
+
+    \subsection*{Octant}
+
+Consider three mutually perpendicular planes meet at a point O. 
+\begin{center}
+    \includegraphics*[scale=0.7]{1.png}
+\end{center}
+
+
+Let these three planes intercept along three lines XOX’, YOY’ and ZOZ’ called the x-axis, y-axis, and z-axis respectively.The three coordinate planes divide the space into eight parts known
+as octants. These octants could be named as XOYZ, X'OYZ, X'OY'Z, XOY'Z, XOYZ',
+X'OYZ', X'OY'Z' and XOY'Z'. and denoted by I, II, III, ..., VIII , respectively.
+
+\begin{itemize}
+    \item coordinate of the poin in x axis is of the form $(x,0,0)$
+    \item coordinate of the poin in y axis is of the form $(0,y,0)$
+    \item coordinate of the poin in z axis is of the form $(0,0,z)$
+    \item coordinate of the poin in xy plane is of the form $(x,y,0)$
+    \item coordinate of the poin in yz plane is of the form $(0,y,z)$
+    \item coordinate of the poin in xz plane is of the form $(x,0,z)$
+\end{itemize}
+The sign of the coordinates of a point determine the octant in which the
+point lies. The following table shows the signs of the coordinates in eight octants.
+
+\begin{center}
+    \includegraphics*[scale=0.7]{2.png}
+\end{center}
+\subsubsection*{Distance between Two Points}
+Distance between two points $P(x_1,y_1)$ and $Q(x_2,y_2)$ in 3D plane is  
+$$PQ=\sqrt{(x_1-x_2)^2+(y_1-y_2)^2+(z_1-z_2)^2}$$
+
+
+
+\end{document}

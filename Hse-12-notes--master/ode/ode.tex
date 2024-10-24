@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[margin=2cm]{geometry}
+\usepackage{multicol,amsmath, amssymb}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{pgfplots}
+\usepackage{multirow}
+\definecolor{tablecolor}{RGB}{199, 234, 251}
+\titleformat{\subsection}
+{\color{red}\normalfont\Large\bfseries}
+{\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}
+{\color{blue}\normalfont\large\bfseries}
+{\thesubsubsection}{1em}{}
+
+\titlespacing{\subsection}{0pt}{0pt}{0pt} % Adjust the spacing here
+\titlespacing{\subsubsection}{0pt}{\baselineskip}{0pt} % Adjust the spacing here
+\newcommand{\summation}[2]{\sum\limits^{#1}_{#2}}
+
+\usepackage{fancyhdr}
+\usepackage{hyperref} % For hyperlinks
+
+% Define the URL for the footer
+\newcommand{\myURL}{https://mohammedbilalns.github.io/Math-Demystified/}
+
+% Set up fancy headers and footers
+\pagestyle{fancy}
+\fancyhf{} % Clear header and footer
+\rfoot{\href{\myURL}{\myURL}} % Set the right part of the footer as a hyperlink
+
+
+
+
+\begin{document}
+\begin{center}
+    {\LARGE \textbf{Differenial Equations} }
+\end{center}
+Equation involving derivative (derivatives) of the dependent variable(y)
+with respect to independent variable (variables)(x) is called a differential equation. In this chapter we study the method formation of a Differential Equation and solving of a Differential Equation.
+
+A differential equation involving derivatives of the dependent variable with respect
+to only one independent variable is called an \textbf{ordinary differential equation}
+
+eg: $$2 \frac{d^2 y}{dx^2}+ \left( \frac{dy}{dx}\right)^3 =0$$
+\subsection*{Order of a differential equation}
+Order of a differential equation is defined as the order of the highest order derivative of
+the dependent variable with respect to the independent variable involved in the given
+differential equation.
+
+eg: $$ \frac{d^2y}{dx^2}+ y =0 (\text{\,order 2})$$ $$\frac{dy}{dx}= e^x (\text{ order 1})$$
+
+\subsection*{Degree of a differential equation}
+Degree of a DE is defined as the exponent of highest differential coefficient appearing in the equation provided the equation is made into polynomial form in all differential coefficient.
+\subsection*{Homogenous DE}
+A function $F(x, y)$ is said to be \textbf{homogeneous function} of degree $n$ if $F( \lambda x, \lambda y) = \lambda ^n F(x, y)$ for any nonzero constant $\lambda$. Then the function is of the form $\frac{dy}{dx}=g(\frac{y}{x})$
+
+To solve put $y = vx $ then $$\frac{dy}{dx}=v+x \frac{dv}{dx}$$. Then we can solve the DE in the variable separable form easily 
+
+\subsection*{First order Linear DE}
+DE of the form $$\frac{dy}{dx}+Py = Q$$ where P and Q are Functions of x only 
+
+To solve 
+\begin{itemize}
+    \item Find I.F = $e^{\int p dx}$
+    \item Write solution as $$y (I.F) =\int (Q \times I.F)dx +C $$
+\end{itemize}
+
+
+
+
+
+
+
+
+
+\end{document}

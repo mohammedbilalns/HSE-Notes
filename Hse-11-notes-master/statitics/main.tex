@@ -1,0 +1,125 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[margin=2cm]{geometry}
+\usepackage{multicol,amsmath, amssymb}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{pgfplots}
+
+\titleformat{\subsection}
+{\color{red}\normalfont\Large\bfseries}
+{\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}
+{\color{blue}\normalfont\large\bfseries}
+{\thesubsubsection}{1em}{}
+
+\titlespacing{\subsection}{0pt}{0pt}{0pt} % Adjust the spacing here
+\titlespacing{\subsubsection}{0pt}{\baselineskip}{0pt} % Adjust the spacing here
+\newcommand{\summation}[2]{\sum\limits^{#1}_{#2}}
+
+\usepackage{fancyhdr}
+\usepackage{hyperref} % For hyperlinks
+
+% Define the URL for the footer
+\newcommand{\myURL}{https://mohammedbilalns.github.io/Math-Demystified/}
+
+% Set up fancy headers and footers
+\pagestyle{fancy}
+\fancyhf{} % Clear header and footer
+\rfoot{\href{\myURL}{\myURL}} % Set the right part of the footer as a hyperlink
+
+\begin{document}
+\begin{center}
+    {\LARGE \textbf{Statitics} }
+\end{center}
+
+\begin{multicols}{2}
+
+\textbf{\Large Measures of Dispersion}
+
+This gives a measure of the dispersion of the observation around the measure of central tendency of the data collected.
+
+\subsection*{Range}
+Range of a data = Maximum value – Minimum value.
+
+\subsection*{Mean Deviation}
+Mean deviation of central tendancy 'a' of a data is given by 
+$$M.D (a) = \frac{\text{Sum of absolute values of deviations from 'a'}}{\text{Number of observations}}$$
+
+\begin{itemize}
+    \item \subsubsection*{Ungrouped data} Mean deviation for the data  $x_1, x_2, x_3, ...., x_n$ is  
+    $$M.D(a)=\frac{ \summation{n}{i=1} |x_i -a| }{n}$$
+    \begin{itemize}
+        \item $Mean(\bar{x}) =\frac{\summation{n}{i=1}x_i}{n}$
+        \item Median is $\frac{n+1}{2} ^{th}$ term  when n is odd ,mean of $\frac{n}{2} ^{th}$ and $\frac{n}{2}+1 ^{th}$ term when n is even
+    \end{itemize}
+
+    \item \subsubsection*{Grouped Discrete frequency distribution } Mean deviation for the data    $x_1, x_2, ..., x_n$ occurring with frequencies $f_1, f_2 , ..., f_n$ respectively is 
+    $$ M.D(a)=\frac{ \summation{n}{i=1} f_i|x_i -a| }{ \summation{n}{i=1}f_i}$$
+
+    \begin{itemize}
+        \item $Mean(\bar{x}) =\frac{\summation{n}{i=1}f_i x_i}{\summation{n}{i=1}f_i}$
+        \item To find the median form a column for cumulative frequencies
+    \end{itemize}
+
+    \item \subsubsection*{Grouped Continuous frequency distribution }A continuous frequency distribution is a series
+    in which the data are classified into different class-intervals without gaps alongwith
+    their respective frequencies.
+    
+    To find the Mean deviation about a central tendancy 'a' , choose $x_i$ as midpoint of the intervals and convert it into Discrete.
+
+    \begin{itemize}
+        \item $Mean(\bar{x}) =\frac{\summation{n}{i=1}f_i x_i}{\summation{n}{i=1}f_i}$
+        \item median =$l+\frac{c(\frac{N}{2}-f_0)}{f_1}$\\
+        $l$ -lower limit of the median class \\
+        $f_0 $- Cumulative frequency of the class preceding the median class.\\
+        $f_1$ - Cumulative frequency of the median class.\\
+        $c$ - width of the interval \\
+        $N-\summation{i=0}{n}f_i$
+
+
+
+    \end{itemize}
+
+    \textbf{Shortcut method for finding the mean of frequency distribution }
+
+    \begin{enumerate}
+        \item Select an assumed mean 'a' (value close to middle)
+        \item substract assumed mean from eaach $x_i$
+        \item choose appropriate h and divide each $x_i -a$ by h and define it as $d_i$
+        \item find mean using the fromula 
+        $$\bar{x}= a+\frac{\summation{i=1}{n}f_i d_i}{N} \times h$$
+    \end{enumerate}
+
+    \subsection*{Variance and Standard Deviation}
+standard deviation$ = \sqrt{variance}$
+    \subsubsection*{Ungrouped Data}
+    variance  for the data  $x_1, x_2, x_3, ...., x_n$ is  
+    $\sigma^2 = \frac{1}{n} \summation{i=1}{n} (x_i-\bar{x})^2$
+
+    \subsubsection*{Grouped  frequency distribution } Variance for the data    $x_1, x_2, ..., x_n$ occurring with frequencies $f_1, f_2 , ..., f_n$ respectively is 
+    $$\sigma^2=\frac{1}{N} \summation{i=1}{n}f_i(x_i-\bar{x})^2$$
+
+    \textbf{Another formula for standard deviation}
+    $$\sigma = \frac{1}{N} \sqrt{N \summation{i=1}{n}f_i x_i^2 -(\summation{i=1}{n}f_i x_i)^2}$$
+
+    \textbf{Shortcut method to find variance and standard deviation}
+
+    Let the assumed mean be ‘A’ and the scale be reduced to $\frac{1}{h}$ times (h being the
+width of class-intervals). Let the step-deviations or the new values be $y_i$.
+$$y_i =\frac{x_i- A}{h}$$
+then $$\sigma =\frac{h}{N} \sqrt{N \summation{i=1}{n}f_i y_i^2-(\summation{i=1}{n}f_i y_i)^2}$$
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+\end{multicols}
+\end{document}

@@ -1,0 +1,151 @@
+
+\documentclass[12pt]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[margin=2cm]{geometry}
+\usepackage{multicol,amsmath, amssymb}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{pgfplots}
+
+\titleformat{\subsection}
+{\color{red}\normalfont\Large\bfseries}
+{\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}
+{\color{blue}\normalfont\large\bfseries}
+{\thesubsubsection}{1em}{}
+
+\titlespacing{\subsection}{0pt}{0pt}{0pt} % Adjust the spacing here
+\titlespacing{\subsubsection}{0pt}{\baselineskip}{0pt} % Adjust the spacing here
+
+\usepackage{fancyhdr}
+\usepackage{hyperref} % For hyperlinks
+
+% Define the URL for the footer
+\newcommand{\myURL}{https://mohammedbilalns.github.io/Math-Demystified/}
+
+% Set up fancy headers and footers
+\pagestyle{fancy}
+\fancyhf{} % Clear header and footer
+\rfoot{\href{\myURL}{\myURL}} % Set the right part of the footer as a hyperlink
+
+\begin{document}
+\begin{center}
+    {\LARGE \textbf{LIMITS AND DERIVATIVES} }
+\end{center}
+
+
+This chapter is an introduction to Calculus. Calculus is that branch of mathematics which mainly deals with the study of change in the value of a function as the points in the domain change.
+
+\subsection*{Limit of a function}
+Consider the function $f(x) = x^2.$ Observe that as $x$ takes values very close to $0$,
+the value of $f(x)$ also moves towards $0$
+\begin{center}
+    
+
+\includegraphics*[scale=0.3]{1.png}
+\end{center}
+We say 
+$$lim _{x \rightarrow 0} f(x)=0$$
+(to be read as limit of f (x) as x tends to zero equals zero).
+In general as $x \rightarrow a$, $f (x) \rightarrow l$, then $l$ is called \textbf{limit of the function} $f (x)$ which is
+symbolically written as 
+$$lim_{x \rightarrow a} f(x)=l$$
+
+
+Consider the following function $g(x)=|x|,x \not = 0$. Observe that $g(0)$ is not defined.
+Computing the value of$ g(x)$ for values of x very
+near to $0$, we see that the value of $g(x)$ moves
+towards $0$.So $lim _{x \rightarrow 0} g(x)=0$
+\begin{center}
+    \includegraphics*[scale=0.3]{2.png}
+
+\end{center}
+
+\begin{itemize}
+    \item $\lim _{x \rightarrow a^{-}} f(x)=A$ Read as \textbf{left limit} of $f(x)$ is '$A$', means that $f(x) \rightarrow A$ as $x \rightarrow a-$. To evaluate the left limit we use the following substitution $\lim _{x \rightarrow a^{-}} f(x)=\lim _{h \rightarrow 0} f(a-h)$
+    \item $\lim _{x \rightarrow a^{+}} f(x)=B$  Read as \textbf{right limit} of $f(x)$ is '$B$', means that $f(x) \rightarrow B$ as $x \rightarrow a+$. To evaluate the left limit we use the following substitution $\lim _{x \rightarrow a^{+}} f(x)=\lim _{h \rightarrow 0} f(a+h)$
+\end{itemize} 
+
+
+If left limit and right limit of $f(x) $at $x = a$ are equal, then we say that the limit of the function $f(x)$ exists at $x = a$ and is denoted
+$lim _{x \rightarrow 0} f(x)$ Otherwise we say that $lim _{x \rightarrow 0} f(x)$ does not exists.
+
+
+Consider the function $f(x)=\begin{cases}
+    1 \quad &\text{if} \, x \leq 0 \\
+    2 \quad &\text{if} \, x >0 \\
+\end{cases}$
+\includegraphics*[scale=0.3]{3.png}
+
+The left hand limit of $f (x)$ at $0$ is $lim_{x \rightarrow 0-} f(x)=1$ and the right hand limit of $f (x)$ at $0$ is $;im_{x \rightarrow 0+} f(x)=2$. So limit does not exists for this function at 0
+
+\subsubsection*{Algebra of limits}
+For functions $f$ and $g$
+\begin{itemize}
+    \item $lim_{x \rightarrow a}(kf(x))=k \, lim_{x \rightarrow a} f(x)$
+    \item $lim_{x \rightarrow a}(f(x) \pm g(x))= lim_{x \rightarrow a}f(x) \pm lim_{x \rightarrow a} g(x)$
+    \item $lim_{x \rightarrow a}(f(x) \times g(x))= lim_{x \rightarrow a}f(x) \times lim_{x \rightarrow a} g(x)$
+    \item $lim_{x \rightarrow a}(\frac{f(x)}  {g(x)})=\frac{ lim_{x \rightarrow a}f(x)} { lim_{x \rightarrow a} g(x)}$
+
+\end{itemize}
+\subsubsection*{Some standard results}
+\begin{itemize}
+    \item $lim_{x \rightarrow a} k = k $, where $k$ is a constant .
+    \item $lim_{x \rightarrow a}f(x) = f(a)$, if $f$ s a polynomial function.
+    \item For  rational function of the form $\frac{0}{0}$ f possible we can factorise the numerator and denominator and then, cancel the common factors and again put x = a. 
+    \item $lim_{x \rightarrow a} \frac{x^n-a^n}{x-a}=na^{n-1}$
+    \item $lim_{x \rightarrow 0} \frac{(1+x)^n - 1}{x}=n$
+    \item Let $f$ and $g$ be two real valued functions with the same domain such that
+   $ f (x) \leq g( x)$ for all $x$ in the domain of definition, For some $a$, if both $lim_{x \rightarrow a} f(x)$ and $lim_{x \rightarrow a} g(x)$ exist, then $lim_{x \rightarrow a} f(x) \leq lim_{x \rightarrow a} g(x)$.
+   \item(Sandwich Theorm) Let $f, g$ and $h$ be real functions such that
+   $f (x) \leq g( x) \leq h(x)$ for all $x$ in the common domain of definition. For some real number
+   $a$, if $lim_{x \rightarrow a}f(x) = l = lim_{x \rightarrow a}
+   h(x)$, then $lim_{x \rightarrow a} g(x) = l$.
+   \item  $lim_{x \rightarrow \infty}\frac{1}{x}=0$
+   \item  $lim_{x \rightarrow 0}\frac{e^x -1}{x}=1$
+   \item $lim_{x \rightarrow 0} \frac{log(1+x)}{x}=1$
+   
+\end{itemize}
+
+\subsubsection*{Limits of Trigonometric Functions}
+\begin{itemize}
+    \item $lim_{x \rightarrow 0}\frac{sin (x)}{x}=1$
+    \item $lim_{x \rightarrow 0}\frac{1- cos (x)}{x}=0$
+\end{itemize}
+
+\subsection*{Derivatives}
+Suppose $f$ is a real valued function and $a$ is a point in its domain of
+definition. The \textbf{derivative} of $f$ at $a$ is defined by
+$$lim_{h \rightarrow 0}\frac{f(a+h)-f(a)}{h}$$
+provided this limit exists. Derivative of $f (x)$ at $a$ is denoted by $f'(a)$.
+
+\subsubsection*{First principle of derivative}
+Suppose $f$ is a real valued function, the function defined by 
+$$\lim _{h \rightarrow 0} \frac{f(x+h)-f(x)}{h}$$
+Wherever this limit exists is defined as the derivative of $f$ at $x$ and is denoted by $f'(x)$ or  $\frac{dy}{dx}$ or $y'$
+
+\subsubsection*{Algebra of Derivatives}
+For differentiable functions $f$ and $g$
+\begin{itemize}
+    \item $\frac{d}{dx}(k f(x))=k \frac{d}{dx}(f(x))$
+    \item $\frac{d}{dx}(f(x) \pm g(x))= \frac{d}{dx}(f(x)) \pm \frac{d}{dx}(g(x))$
+    \item $\frac{d}{dx}[f(x) \times g(x)]= \frac{d}{dx}(f(x)) g(x)+f(x) \frac{d}{dx}(g(x))$
+    \item $\frac{d}{dx}(\frac{f(x)}{g(x)})=\frac{g(x)\frac{d}{dx}(f(x))-f(x) \frac{d}{dx}(g(x))}{(g(x))^2}$
+    
+\end{itemize}
+
+\subsubsection*{Some standard results}
+\begin{itemize}
+    \item $\frac{d}{dx}(k)=0$
+    \item $\frac{d}{dx}(x^n)=n x^{n-1}$
+    \item $\frac{d}{dx}(x)=1$
+    \item $\frac{d}{dx}(\sqrt{x})=\frac{1}{2 \sqrt{x}}$
+    \item $\frac{d}{dx}(sin (x))=cos(x)$
+    \item $\frac{d}{dx}(cos(x))=-sin(x)$
+    \item $\frac{d}{dx}{tan (x)}= sec^2(x)$
+    \item $\frac{d}{dx}{sec(x)}= sec(x)tan(x)$
+    \item $\frac{d}{dx}(cosec(x))=-cosec(x)cot(x)$
+    \item $\frac{d}{dx}(cot(x))=-cosec^2(x)$
+\end{itemize}
+\end{document}

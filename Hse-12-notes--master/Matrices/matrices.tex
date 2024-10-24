@@ -1,0 +1,237 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[margin=2cm]{geometry}
+\usepackage{multicol,amsmath, amssymb}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{pgfplots}
+
+\titleformat{\subsection}
+{\color{red}\normalfont\Large\bfseries}
+{\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}
+{\color{blue}\normalfont\large\bfseries}
+{\thesubsubsection}{1em}{}
+
+\titlespacing{\subsection}{0pt}{0pt}{0pt} % Adjust the spacing here
+\titlespacing{\subsubsection}{0pt}{\baselineskip}{0pt} % Adjust the spacing here
+\newcommand{\summation}[2]{\sum\limits^{#1}_{#2}}
+\usepackage{fancyhdr}
+\usepackage{hyperref} % For hyperlinks
+
+% Define the URL for the footer
+\newcommand{\myURL}{https://mohammedbilalns.github.io/Math-Demystified/}
+
+% Set up fancy headers and footers
+\pagestyle{fancy}
+\fancyhf{} % Clear header and footer
+\rfoot{\href{\myURL}{\myURL}} % Set the right part of the footer as a hyperlink
+
+\begin{document}
+\begin{center}
+    {\LARGE \textbf{Matrices} }
+\end{center}
+
+
+    \subsection*{Basic Concepts}
+\subsubsection*{Matrix}
+A matrix is an ordered rectangular array of numbers or functions. The numbers or functions are called the elements or the entries of the matrix.
+
+eg:
+$\begin{bmatrix}
+    1 & 3\\
+    -5  & \sqrt{3}
+    \end{bmatrix}$,$\begin{bmatrix}
+        1+x & x^3 & 3\\
+        cos x & sin x +2 & tan x
+        \end{bmatrix}$
+
+    \subsubsection*{Order of a Matrix}
+    A matrix having $m$ rows and $n$ column is called a matrix of order $m \times n$ or simply $m \times n$ Matrix, generally denoted by 
+    $$A=\begin{bmatrix}
+        a_{11} & a_{12} & \dots & a_{1n}\\
+        a_{21} & a_{22} & \dots & a_{2n}\\
+        \vdots & \vdots & \vdots & \vdots \\
+        a_{m1} & a_{m2} & \dots & a_{mn}
+        \end{bmatrix}=[a_{ij}]_{m \times n}$$
+
+        where $1 \leq i \leq m,1 \leq i \leq n , i,j \in N$
+
+        \subsection*{Types of Matrices}
+        \begin{enumerate}
+          \item  \textbf{Column Matrix}: A matrix having only one column is called Column Matrix.
+         eg: $\begin{bmatrix}
+            1 \\
+            2 \\
+            3
+            \end{bmatrix}$
+            \item \textbf{Row Matrix}: A matrix having only one row is called Row Matrix. eg: $\begin{bmatrix}
+                1 & 2 & 3
+                \end{bmatrix}$
+            \item   \textbf{Square Matrix}: A matrix having equal number of row and column is called Square Matrix. eg:$\begin{bmatrix}
+                1 &5  &7\\
+                2 & 8 & 9\\
+                3 &2 &7
+                \end{bmatrix}$
+            \item  \textbf{Diagonal Matrix}: A Square matrix having all its non-diagonal entries zero is called Diagonal Matrix.eg:$\begin{bmatrix}
+                1 &0  &0\\
+                0 & 8 & 0\\
+                0 &0 &7
+                \end{bmatrix}$
+            \item  \textbf{Scalar Matrix}: A Square matrix having all its non-diagonal entries zero and equal diagonal elements is called Scalar Matrix.eg:$\begin{bmatrix}
+                5 &0  &0\\
+                0 & 5 & 0\\
+                0 &0 &5
+                \end{bmatrix}$
+            \item \textbf{Identity Matrix}: A Square matrix having all its non-diagonal entries zero and diagonal elements unity is called an Identity Matrix.eg:$\begin{bmatrix}
+                1 &0  &0\\
+                0 & 1 & 0\\
+                0 &0 &1
+                \end{bmatrix}$
+            \item \textbf{Zero Matrix}: A matrix having all elements zero is called Zero Matrix.eg:$\begin{bmatrix}
+                0 &0  &0\\
+                0 & 0 & 0\\
+                0 &0 &0
+                \end{bmatrix}$
+        \end{enumerate}
+
+        \subsection*{Operations on Matrices}
+        \subsubsection*{Equality}
+        Two matrices are equal if they are of same order and corresponding elements are equal.
+        \subsubsection*{Addition and Substraction}
+        Addition and substraction are possible only if the two matrices are of same order and the operations are done by adding/substracting the corresponding elements in each Matrix.
+        
+        eg:$\begin{bmatrix}
+            1 &2  &4\\
+            6 & 8 & 7\\
+            2 &8 &5
+            \end{bmatrix}+\begin{bmatrix}
+                3 &7  &8\\
+                6 & 9 & 7\\
+                2 &3 &4
+                \end{bmatrix}=\begin{bmatrix}
+                    4 &9  &12\\
+                    12 & 17 & 14\\
+                    4 &11 &9
+                    \end{bmatrix}, \begin{bmatrix}
+                        1 &2  &4\\
+                        6 & 8 & 7\\
+                        2 &8 &5
+                        \end{bmatrix}-\begin{bmatrix}
+                            3 &7  &8\\
+                            6 & 9 & 7\\
+                            2 &3 &4
+                            \end{bmatrix}=\begin{bmatrix}
+                                -2 &-5  &-4\\
+                                0 & -1 & 0\\
+                                0 &5 &-5
+                                \end{bmatrix}$\\
+
+
+                               \textbf{ \large Some properties of matrix addition }
+        \begin{itemize}
+            \item \textbf{Commutative Law} - $A+B=B+A$
+            \item \textbf{Associative Law} - $(A+B)+C =A+(B+C)$
+            \item \textbf{Existence of additive Identity} - For every $m \times n$ matrix A there exists an $m \times n$ matrix $O$ such that $A+O=A=O+A$ called the Additive Identity which is exactly the $m \times n$ zero matrix.
+            \item \textbf{Existence of additive Inverse}-  For every $m \times n$ matrix A there exists an $m \times n$ matrix $-A$ such that $A+ -A =O$ called the Additive Inverse of A. 
+        \end{itemize}
+    \subsubsection*{Multiplication of a matrix by a scalar}
+    The multiplication of a matrix $A$ by a scalar number $k$ is done by multiplying each entries of matrix $A$ by $k$ and matrix thus obtained is $kA$.
+
+    eg:$3 \times \begin{bmatrix}
+        1 &2  &4\\
+        6 & 8 & 7\\
+        2 &8 &5
+        \end{bmatrix}=\begin{bmatrix}
+            3 &6  &12\\
+            18 & 24 & 21\\
+            6 &24 &15
+            \end{bmatrix}$\\
+
+
+    \textbf{\large Some Properties of scalar multiplication }
+
+    Let $k$ and $l$ are some scalars , $A$ and $B$ are Matrices with same order
+    \begin{itemize}
+        \item $k(A+B)=kA+kB$
+        \item $(k+l)A=kA+lA$
+
+    \end{itemize}
+
+\subsubsection*{Multiplication}
+Multiplication is possible only if the number of column of first matrix is equal to the number of rows of the second. The operation is done by multiplying the element in the first row of the first matrix with the corresponding elements in the first column in the second matrix.
+
+eg:$\begin{bmatrix}
+    1 &2  &4\\
+    6 & 8 & 7\\
+    2 &8 &5
+    \end{bmatrix} \times\begin{bmatrix}
+        3 &7  &8\\
+        6 & 9 & 7\\
+        2 &3 &4
+        \end{bmatrix}=\begin{bmatrix}
+            1 \times 3+2 \times 6+4 \times 2 & 1 \times 7+2 \times9+ 4 \times3   & 1\times8+2\times7+4\times4\\
+            6\times 3+8\times6+7\times2 & \dots & \dots\\
+            \dots &\dots &\dots
+            \end{bmatrix}= \begin{bmatrix}
+                23 &37  &38\\
+                80 & \dots & \dots\\
+                \dots &\dots &\dots
+                \end{bmatrix}$\\\\
+
+                \textbf{\large Some Properties of Matrix Multiplication}
+                
+                For martices A,B and C
+                \begin{enumerate}
+                    \item \textbf{Non Commutativity}- $A \times B \not = B \times A$
+                    \item \textbf{Associative Law} - $(AB)C=A(BC)$
+                    \item \textbf{Distributive Law}- \begin{enumerate}
+                        \item A(B+C)=AB+AC 
+                        \item (A+B)C=AC+BC
+                    \end{enumerate}
+                \end{enumerate}
+
+
+
+
+\subsection*{Transpose of A Matrix}
+The transpose of a matrix A is obtained by interchanging the row and column of A and is denoted by A'.
+
+eg:$$A=\begin{bmatrix}
+    1 &2  \\
+    6 & 8 \\
+    2 &8 
+    \end{bmatrix}, A'=\begin{bmatrix}
+        1 &6  &2\\
+        2 & 8 & 8
+
+        \end{bmatrix}$$
+\subsubsection*{Properties of Transpose}
+\begin{itemize}
+    \item $(A')'=A$
+    \item $(kA)'=kA'$
+    \item $(A+B)'=A'+B'$
+    \item $(AB)'=A'B'$
+\end{itemize}
+
+\subsubsection*{Symmetric and Skew Symmetric Matrices}
+A square matrix A is said to be \textbf{Symmetric} if $A'=A$, \textbf{Skew-Symmetric} if $A'=-A$.In a symmetric matrix the corresponding elements on both sides of the main diagonal will be same.In a Skew Symmetric matrix the corresponding elements on both sides of the main diagonal differ only in sign
+
+\subsubsection*{Theorem 1}
+For any square matrix $A$ with real number entries, $A + A'$ is a symmetric
+matrix and $A - A'$ is a skew symmetric matrix
+\subsubsection*{Theorem 2}
+Any square matrix can be expressed as the sum of a symmetric and a
+skew symmetric matrix $$A=\frac{1}{2}(A+A')+\frac{1}{2}(A-A')$$
+
+\subsection*{Invertible Matrices}
+If $A$ is a square matrix of order $m$, and if there exists another square
+matrix $B$ of the same order $m$, such that$ AB = BA = I$, then $B$ is called the inverse
+matrix of $A$ and it is denoted by $A^{-1}$. In that case A is said to be invertible.
+
+\subsubsection*{Theorem 3}
+Inverse of a square matrix, if it exists, is unique.
+\subsubsection*{Theorem 4}
+If A and B are invertible matrices of the same order, then $(AB)^{-1} = B^{-1}A^{-1}$.
+\end{document}

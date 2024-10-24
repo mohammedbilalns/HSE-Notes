@@ -1,0 +1,181 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[margin=2cm]{geometry}
+\usepackage{multicol,amsmath, amssymb}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{pgfplots}
+
+\titleformat{\subsection}
+{\color{red}\normalfont\Large\bfseries}
+{\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}
+{\color{blue}\normalfont\large\bfseries}
+{\thesubsubsection}{1em}{}
+
+\titlespacing{\subsection}{0pt}{0pt}{0pt} % Adjust the spacing here
+\titlespacing{\subsubsection}{0pt}{\baselineskip}{0pt} % Adjust the spacing here
+\newcommand{\summation}[2]{\sum\limits^{#1}_{#2}}
+\usepackage{fancyhdr}
+\usepackage{hyperref} % For hyperlinks
+
+% Define the URL for the footer
+\newcommand{\myURL}{https://mohammedbilalns.github.io/Math-Demystified/}
+
+% Set up fancy headers and footers
+\pagestyle{fancy}
+\fancyhf{} % Clear header and footer
+\rfoot{\href{\myURL}{\myURL}} % Set the right part of the footer as a hyperlink
+s
+\begin{document}
+\begin{center}
+    {\LARGE \textbf{Continuity and Differentiability} }
+\end{center}
+
+\begin{multicols*}{2}
+    As a continuation of limits and derivatives studied in the previous years, now we are entering into a very important concept continuity and its graphical peculiarities. We also learn different methods of differentiation and introduce new class of functions such as exponential and logarithmic functions.
+
+\subsection*{Continuity}
+ \subsubsection*{ Continuity of a function at a point}
+ A function f(x) is said to be continuous at a point $'a'$ if the following conditions are satisfied.
+ \begin{enumerate}
+    \item $f(a)$ should be defined.
+    \item $f(a)$ should be equal to the limit of the function at $'a'$. $$lim_{x \rightarrow a-}f(x)=lim_{x \rightarrow a+}f(x)=f(a)$$
+ \end{enumerate}
+
+ \subsubsection*{Continuity of a function}
+ A function $f(x)$ is said to be continuous if the function is continuous at every point on its domain. Some standard continuous functions are mentioned below;
+ \begin{enumerate}
+    \item constant function $f(x)=c,$  $c$ is a constant 
+    \item Identity function $f(x)=x$
+    \item Modulus function $f(x)=|x|$
+    \item Exponential function $f(x)=e^x$
+    \item Logarithmic function $f(x)=log x$
+    \item Polynomial function $f(x)=a_0 +a_1 x +a_2 x^2 +\dots +a_n x^n$
+    \item Rational function $f(x)=\frac{p(x)}{q(x)},$ p(x) and q(x) are Polynomial function and $q(x) \not = 0$
+    \item Triganometric and Inverse Triganometric Functions.
+ \end{enumerate}
+
+ Graphical approach: If there is a break in the graph of a function then it is not continuous.
+
+ \subsubsection*{Algebra of Continuous functions}
+ Suppose $f$ and $g$ be two real functions in their respective domains then  $f+g,g-g,f \times g$ and $\frac{f}{g},g \not =0$ are also Continuous.
+ 
+
+ \subsection*{Differentiability}
+ Suppose $f$ is a real function and $c$ is a point in its domain. The derivative of $f$ at $c$ is
+defined by $$lim_{h \rightarrow 0} \frac{f(c+h)-f(c)}{h}$$
+provided this limit exists. Derivative of $f$ at $c$ is denoted by $f'(c)$ or $\frac{d}{dx}(f(x))|_{c}$.The 
+function defined by
+$$f'(c)=lim_{h \rightarrow 0} \frac{f(c+h)-f(c)}{h}$$
+
+\begin{itemize}
+    \item Every differentiable function is continuous. But the converse need not be.true, eg; $f(x) = |x|$.
+    
+\end{itemize}
+
+\subsubsection*{Some standard results}
+\begin{enumerate}
+    \item $\frac{d}{dx}(k)=0$
+    \item $\frac{d}{dx}(x^n)=n x^{n-1}$
+    \item $\frac{d}{dx}(x)=1$
+    \item $\frac{d}{dx}(\frac{1}{x})=\frac{-1}{x^2}$
+    \item $\frac{d}{dx}(\sqrt{x})=\frac{1}{2 \sqrt{x}}$
+    \item $\frac{d}{dx}(sin (x))=cos(x)$
+    \item $\frac{d}{dx}(cos(x))=-sin(x)$
+    \item $\frac{d}{dx}{tan (x)}= sec^2(x)$
+    \item $\frac{d}{dx}{sec(x)}= sec(x)tan(x)$
+    \item $\frac{d}{dx}(cosec(x))=-cosec(x)cot(x)$
+    \item $\frac{d}{dx}(cot(x))=-cosec^2(x)$
+\end{enumerate}
+
+\subsubsection*{Algebra of Derivatives}
+For differentiable functions $f$ and $g$
+\begin{itemize}
+    \item $\frac{d}{dx}(k f(x))=k \frac{d}{dx}(f(x))$
+    \item $\frac{d}{dx}(f(x) \pm g(x))= \frac{d}{dx}(f(x)) \pm \frac{d}{dx}(g(x))$
+    \item $\frac{d}{dx}[f(x) \times g(x)]= \frac{d}{dx}(f(x)) g(x)+f(x) \frac{d}{dx}(g(x))$
+    \item $\frac{d}{dx}(\frac{f(x)}{g(x)})=\frac{g(x)\frac{d}{dx}(f(x))-f(x) \frac{d}{dx}(g(x))}{(g(x))^2}$
+    
+\end{itemize}
+
+\subsection*{Derivative of composite functions(chain rule)}
+
+Let $f$ be a real valued function which is a composite of two
+functions $h$ and $g$ ;i.e $f=hog$ ,$$f(x)=h(g(x))$$
+Then $$\frac{d}{dx}f(x)=h'(f(x)) \times g'(x)$$
+
+\subsection*{Derivatives of implicit functions}
+Sometimes functions may not be given explicitly as $y=f(x)$.For example , consider the following relationship between $x$ and $y$.
+$$x-y-\pi=0$$ 
+In this case we differentiate both sides of the function with respect to $×$ and solve for $\frac{dy}{dx}.$
+
+
+\subsection*{Derivatives of inverse trigonometric functions}
+\begin{tabular}{ | c |c | c | c | } 
+    \hline
+    f(x)& $sin^{-1}x$ & $cos^{-1}x$ & $tan^{-1}x$\\ 
+    \hline
+    f'(x)& $\frac{1}{\sqrt{1-x^2}}$ & $-\frac{1}{\sqrt{1-x^2}}$  & $\frac{1}{1+x^2}$\\ 
+    \hline
+
+  \end{tabular}
+  \subsection*{Exponential and Logarithmic Functions}
+
+  The exponential function with positive base $b > 1$ is the function
+  $$y = f(x)=b^x$$
+  Exponential function with base 10 is called the \textbf{common exponential function.}
+
+
+  Sum of the series $$1+\frac{1}{1!}+\frac{1}{2!}+\dots $$ is a number between 2 and 3 and is denoted by $e$.The exponential function with base $e$ is called \textbf{Natural exponential function.} 
+ 
+  Let $b > 1$ be a real number. Then we say \textbf{logarithm} of a to base b is x if
+$b^x = a$.If the base b = 10, we say it
+is common logarithms and if b = e, then
+we say it is natural logarithms. Often
+natural logarithm is denoted by ln.logarithmic function is the inverse of exponential function. 
+
+\subsubsection*{Properties of log}
+\begin{itemize}
+    \item $x= e^{{log x }}$ for  $x \in R^+$
+    \item $log(p^n)=n log(p)$
+    \item $log (pq)=log p + log q$
+    \item $log(\frac{p}{q})=log p - log q$
+    \item $\frac{d}{dx} a^x=a^x log a $ 
+    \item $\frac{d}{dx} e^x =e^x$ (since $log  e =1$)
+\end{itemize}
+\subsubsection*{ Logarithmic Differentiation}
+Function with are complicated Rational functions and of the form $f(x) = u(x)^{v(x)}$ is differentiated using Logarithmic Differentiation method. Here first take logarithm on both sides of the function and proceed as in implicit differentiation.
+
+\subsection*{Parametric Differentiation}
+Relation between two variable $x$ and $y$ which are expressed in the form $x = f(t)$, $y = g(t)$ is said to be parametric form with parameter $t$.Here
+$$\frac{dy}{dx}=\frac{\frac{dy}{dt}}{\frac{dx}{dt}}$$
+
+\subsection*{ Second Order Derivative}
+If $f'(x)$ is differentiable we may differentiate once again with respect to x.Then $\frac{d}{dx}(\frac{dy}{dx})$ is called the Second Derivate of $f$ with respective to $x$, denoted by $\frac{d^2 y}{dx^2}$ or f”(x) or y”.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+\end{multicols*}
+
+
+
+
+
+
+
+
+\end{document}

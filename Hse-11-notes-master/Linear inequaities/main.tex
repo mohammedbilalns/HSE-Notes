@@ -1,0 +1,75 @@
+
+\documentclass[12pt]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[margin=2cm]{geometry}
+\usepackage{multicol,amsmath, amssymb}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{pgfplots}
+
+\titleformat{\subsection}
+{\color{red}\normalfont\large\bfseries}
+{\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}
+{\color{blue}\normalfont\large\bfseries}
+{\thesubsubsection}{1em}{}
+
+\titlespacing{\subsection}{0pt}{0pt}{0pt} % Adjust the spacing here
+\titlespacing{\subsubsection}{0pt}{\baselineskip}{0pt} % Adjust the spacing here
+
+\usepackage{fancyhdr}
+\usepackage{hyperref} % For hyperlinks
+
+% Define the URL for the footer
+\newcommand{\myURL}{https://mohammedbilalns.github.io/Math-Demystified/}
+
+% Set up fancy headers and footers
+\pagestyle{fancy}
+\fancyhf{} % Clear header and footer
+\rfoot{\href{\myURL}{\myURL}} % Set the right part of the footer as a hyperlink
+
+\begin{document}
+\begin{center}
+    {\LARGE \textbf{LINEAR INEQUALITIES} }
+\end{center}
+
+\begin{multicols}{2}
+
+    Two real numbers or two algebraic expressions related by the symbols $<, >, \leq$ or $\geq$ form an inequality. In this unit we study linear inequalities in one and two variables, their formation and solution graphically.
+
+\subsection*{ Linear Inequalities in One Variable}
+
+\subsubsection*{Examples}
+\begin{itemize}
+    \item $30x<200$
+    \item $5x - 3 < 3x +1$
+    \item $\frac{5-2x}{3}<\frac{x}{6}-5$
+\end{itemize}
+
+The \textbf{solution} of an inequality in one variable is a value of the variable $x$ which makes it a true statement.
+
+\subsubsection*{Rules}
+\begin{enumerate}
+    \item Equal numbers may be added to (or subtracted from) both sides of an equation.
+    \item Both sides of an equation may be multiplied (or divided) by the same non-zero
+    number.
+    
+    \item If we multiply or divide both sides of an inequation by a negative number, the inequality sign will be reversed.
+    \item To represent $x < a$ (or $x > a$) on a number line, put a circle on the number $'a'$ and a dark line to the left (or right) of the number $'a'$.
+    \item To represent $x \leq a$ (or $x \geq a$) on a number line, put a dark circle on the number $'a'$ and a dark line to the left (or right) of the number $'a'$. 
+\end{enumerate}
+\includegraphics*[scale=0.7]{1.png}
+\subsection*{Graphical Solution of Linear Inequalities in Two Variables}
+
+The region containing all the solutions of an inequality is called the \textbf{solution region}.
+
+\begin{itemize}
+    \item To find the solution of inequalities ,First we find the line $ax+by=c$ 
+    \item In order to identify the half-plane represented by inequality, it is just sufficient to take any point $(a, b)$ [say point $(0, 0)$] not on the line and check whether it satisfies the inequality or not. If it satisfies, then the inequality represents the half-plane and shade the region which contains the point, otherwise, the inequality represents that half-plane which does not contain the point within it.
+    \item If the inequality is of the type $ax + by \geq c$ or $ax + by \leq c$, then the point on the line $ax + by = c$ is also included in the solution. So draw a dark line in the solution region.
+    \item If the inequality is of the type $ax + by > c$ or $ax + by < c$, then the point on the line $ax + by = c$ are not to be included in the solution. So draw a broken or dotted line in the solution region.
+\end{itemize}
+
+\end{multicols}
+\end{document}

@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[margin=2cm]{geometry}
+\usepackage{multicol,amsmath, amssymb}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{pgfplots}
+\usepackage{tikz}
+
+\titleformat{\subsection}
+{\color{red}\normalfont\Large\bfseries}
+{\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}
+{\color{blue}\normalfont\large\bfseries}
+{\thesubsubsection}{1em}{}
+
+\titlespacing{\subsection}{0pt}{0pt}{0pt} % Adjust the spacing here
+\titlespacing{\subsubsection}{0pt}{\baselineskip}{0pt} % Adjust the spacing here
+\newcommand{\summation}[2]{\sum\limits^{#1}_{#2}}
+\usepackage{fancyhdr}
+\usepackage{hyperref} % For hyperlinks
+
+% Define the URL for the footer
+\newcommand{\myURL}{https://mohammedbilalns.github.io/Math-Demystified/}
+
+% Set up fancy headers and footers
+\pagestyle{fancy}
+\fancyhf{} % Clear header and footer
+\rfoot{\href{\myURL}{\myURL}} % Set the right part of the footer as a hyperlink
+
+\begin{document}
+\begin{center}
+    {\LARGE \textbf{Three Dimensional Geometry} }
+\end{center}
+To refer a point in space we require a third axis (say z-axis) which leads to the concept of three-dimensional geometry. In this chapter we study the concept of direction cosines, direction ratios, equation of a line and a plane, angle between two lines and two planes, angle between a line and a plane, shortest distance between two skew lines, distance of a point from a plane
+
+\subsection*{Direction Cosines and direction ratios}
+
+Consider a directed line passing through the origin makes angles $\alpha, \beta$ and $\gamma$ with the positive
+direction x-axis, y-axis, and z-axis. Then $\alpha, \beta,$ and $\gamma$ are called direction angles. The cosine of $\alpha, \beta,$ and $\gamma$ are called direction cosines. Generally $cos \alpha = l$, $cos \beta = m$ and $cos \gamma = n$ . Any scalar multiple of direction cosines are called direction ratios.
+
+\begin{itemize}
+    \item If (a, b, c) is the coordinate of a point P then a,b,c is a direction ratio of the directed line passing along P and origin. Direction cosines will be $$l=\frac{a}{\sqrt{a^2+b^2+c^2}}, m=\frac{b}{\sqrt{a^2+b^2+c^2}},n=\frac{c}{\sqrt{a^2+b^2+c^2}}$$
+    \item $l^2+m^2+n^2=1$ 
+\end{itemize}
+\subsubsection*{Direction cosines of a line passing through two points}
+Direction ratios of a line segmnent passing through two points $P(x_1,y_1,z_1)$ and $Q(x_2,y_2,z_2)$  is $$x_2-x_1,y_2-y_1,z_2-z_1$$ Direction angles are $$\frac{x_2-x_1}{AB},\frac{y_2-y_1}{AB},\frac{z_2-z_1}{AB}$$
+
+\subsection*{Equation of a line in space}
+
+\subsubsection*{ Equation of a line through a given point $\vec{a}$ and parallel to given vector $\vec{b}$}
+Let $\vec{a}$ be the position vector of the given point A with respect to the origin O of the coordinate system.Let l be the line which passes through the point A and is parallel to a given vector $\vec{b}$. Let $\vec{r}$ be the position vector of  an arbitary point P on the line then the equation of the line is $$\vec{r}=\vec{a}+\lambda \vec{b}$$ where $\lambda$ be any be any real number.
+\subsubsection*{Cartesian form}
+Let $(x_1,y_1,z_1)$ be coordinates of a given point in line and $a,b$ and $c$ be the direction ratios of the line then $$\frac{x-x_1}{a}=\frac{y-y_1}{b}=\frac{z-z_1}{c}$$ This is the \textbf{Cartesian} equation of the line
+
+\subsection*{Angle between two lines}
+Let $L_1$ and $L_2$ be two lines passing through the origin and with direction ratios $a_1,b_1,c_1$ and $a_2,b_2,c_2$ respectively. then the angle between them is $$cos \theta =\left|\frac{a_1a_2+b_1b_2+c_1c_2}{\sqrt{a_1^2+b_1^2+c_1^2}\sqrt{a_2^2+b_2^2+c_2^2}}\right|$$
+
+Two lines with direction ratios $a_1,b_1,c_1$ and $a_2,b_2,c_2$ are 
+\begin{itemize}
+    \item perpedicular if $$a_1a_2+b_1b_2+c_1c_2=0$$
+    \item parallel if $$\frac{a_1}{a_2}=\frac{b_1}{b_2}=\frac{c_1}{c_2}$$
+\end{itemize}
+\subsection*{Shortest distance between two lines}
+If two lines in space intersect at a point,
+then the shortest distance between them is
+zero. Also, if two lines in space are parallel,
+then the shortest distance between them
+will be the perpendicular distance.
+
+Furthermore there are lines which are neither intersecting nor parallel, such pair of lines are non coplanar and
+are called \textbf{skew lines}.
+\subsubsection*{Distance between two skew lines }
+
+Let $l_1$ and $l_2$ be two skew lines with equations 
+$$\vec{r}=\vec{a_1}+\lambda \vec{b_1},\vec{r}=\vec{a_2}+\lambda \vec{b_2}$$
+
+Then the distance between them will be $$d=\left|\frac{(\vec{b_1}\times \vec{b_2}). (\vec{a_2} -\vec{a_1})}{|\vec{b_1} \times \vec{b_2}|}\right|$$
+\end{document}
